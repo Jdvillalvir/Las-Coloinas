@@ -587,8 +587,8 @@ header{background:var(--dark);border-bottom:1px solid var(--border);padding:1.5r
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5px;padding:4rem 3rem 7rem;max-width:1280px;margin:0 auto}
 .pc{background:var(--charcoal);border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;transition:border-color .4s}
 .pc:hover{border-color:rgba(139,26,26,.5)}
-.pi{position:relative;aspect-ratio:4/3;overflow:hidden}
-.pi img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.75) brightness(.82) contrast(1.05);transition:transform .6s ease,filter .4s}
+.pi{position:relative;overflow:hidden;background:#0a0a0a}
+.pi img{width:100%;height:100%;object-fit:contain;display:block;filter:saturate(.75) brightness(.82) contrast(1.05);transition:transform .6s ease,filter .4s}
 .pc:hover .pi img{transform:scale(1.04);filter:saturate(.9) brightness(.88) contrast(1.05)}
 .po{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,6,6,.72) 0%,rgba(10,6,6,.1) 50%,transparent 100%),linear-gradient(160deg,rgba(139,26,26,.08) 0%,transparent 60%);pointer-events:none}
 .pf{padding:1.6rem 1.8rem 2rem;display:flex;flex-direction:column;gap:.9rem;border-top:1px solid var(--border);flex:1}
