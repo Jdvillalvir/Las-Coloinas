@@ -510,10 +510,10 @@
         var it = cart[id], sub = it.price*it.qty; total += sub;
         html += '<div class="cart-item"><div class="cart-item-name">'+it.name+'</div>'+
           '<div class="cart-item-controls">'+
-          '<button class="qty-btn" onclick="changeCartQty(''+id+'',-1)">−</button>'+
+          '<button class="qty-btn" onclick="changeCartQty(\''+id+'\',-1)">−</button>'+
           '<span class="qty-num">'+it.qty+'</span>'+
-          '<button class="qty-btn" onclick="changeCartQty(''+id+'',1)">+</button>'+
-          '<button class="qty-btn" style="color:#c44;margin-left:.3rem" onclick="removeFromCart(''+id+'')">✕</button>'+
+          '<button class="qty-btn" onclick="changeCartQty(\''+id+'\',1)">+</button>'+
+          '<button class="qty-btn" style="color:#c44;margin-left:.3rem" onclick="removeFromCart(\''+id+'\')">✕</button>'+
           '</div><div class="cart-item-price">L '+sub.toFixed(2)+'</div></div>';
       });
       items.innerHTML = html;
