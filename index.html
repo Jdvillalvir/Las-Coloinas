@@ -159,13 +159,71 @@
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
     /* RESPONSIVE */
-    @media (max-width: 900px) {
-      nav { padding: 1.2rem 2rem; }
-      .nav-links { display: none; }
-      .intro, .locations-grid, .delivery-inner, .menu-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .intro, .locations, .delivery, .menus, .newsletter { padding-left: 2rem; padding-right: 2rem; }
-      footer { flex-direction: column; text-align: center; padding: 2.5rem 2rem; }
-      .footer-copy { padding-left: 2rem; padding-right: 2rem; }
+
+    /* Hamburger */
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .hamburger span { width: 22px; height: 1.5px; background: var(--white); display: block; transition: all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    /* Tablet */
+    @media (max-width: 1024px) {
+      nav { padding: 1.2rem 2.5rem; }
+      .intro { padding: 5rem 2.5rem; gap: 4rem; }
+      .menus { padding: 4rem 2.5rem 6rem; }
+      .locations { padding: 6rem 2.5rem; }
+      .delivery { padding: 5rem 2.5rem; }
+      .delivery-inner { gap: 4rem; }
+      .newsletter { padding: 5rem 2.5rem; }
+      footer { padding: 2.5rem 2.5rem; }
+      .footer-copy { padding-left: 2.5rem; padding-right: 2.5rem; }
+      .divider { padding: 0 2.5rem; }
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; position: fixed; }
+      .nav-links { display: none; flex-direction: column; align-items: center; gap: 1.8rem; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(10,10,10,0.98); backdrop-filter: blur(12px); justify-content: center; z-index: 99; }
+      .nav-links.open { display: flex; }
+      .nav-links a { font-size: 1rem; letter-spacing: 0.2em; }
+      .hamburger { display: flex; z-index: 100; }
+      .intro { padding: 5rem 1.5rem 4rem; grid-template-columns: 1fr; gap: 3rem; }
+      .intro h2 { font-size: clamp(1.8rem, 6vw, 2.5rem); }
+      .intro-stats { grid-template-columns: repeat(3,1fr); gap: 1rem; }
+      .menus { padding: 4rem 1.5rem 5rem; }
+      .menu-grid { grid-template-columns: 1fr; gap: 2px; }
+      .menu-card { padding: 2.5rem; }
+      .locations { padding: 5rem 1.5rem; }
+      .locations-grid { grid-template-columns: 1fr; gap: 3rem; margin-top: 3rem; }
+      .delivery { padding: 4rem 1.5rem; }
+      .delivery-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .newsletter { padding: 4rem 1.5rem; max-width: 100%; }
+      .newsletter-form { flex-direction: column; max-width: 100%; }
+      .newsletter-form input { border-right: 1px solid var(--border); border-bottom: none; }
+      .newsletter-form button { width: 100%; padding: 1rem; }
+      footer { flex-direction: column; text-align: center; padding: 2rem 1.5rem; gap: 1.5rem; }
+      .footer-copy { padding-left: 1.5rem; padding-right: 1.5rem; }
+      .divider { padding: 0 1.5rem; }
+      .hours-box { padding: 2rem; }
+      .intro-card { padding: 2rem; }
+    }
+
+    /* Small Mobile */
+    @media (max-width: 480px) {
+      nav { padding: 1rem; }
+      .hero h1 { font-size: clamp(2.8rem, 11vw, 4rem); }
+      .hero-sub { font-size: 0.6rem; letter-spacing: 0.2em; }
+      .hero-logo-blend { width: 95vw; }
+      .intro-stats { grid-template-columns: 1fr; gap: 1.5rem; }
+      .stat-num { font-size: 2rem; }
+      .section-title { font-size: clamp(1.8rem, 7vw, 2.5rem); }
+      .menu-card { padding: 2rem; }
+      .menu-card-num { font-size: 4rem; }
+      .delivery h2 { font-size: clamp(1.8rem, 7vw, 2.5rem); }
+      .newsletter h2 { font-size: clamp(1.8rem, 7vw, 2.5rem); }
+      footer { gap: 1.2rem; }
+      .footer-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
     }
   </style>
 </head>
@@ -177,11 +235,14 @@
       <span>Procesado por DIPRO</span>
       <span>Hacienda Las Colinas</span>
     </div>
-    <ul class="nav-links">
-      <li><a href="#nosotros">Nosotros</a></li>
-      <li><a href="#menu">Menú</a></li>
-      <li><a href="#ubicaciones">Ubicaciones</a></li>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#nosotros" onclick="closeNav()">Nosotros</a></li>
+      <li><a href="#menu" onclick="closeNav()">Menú</a></li>
+      <li><a href="#ubicaciones" onclick="closeNav()">Ubicaciones</a></li>
     </ul>
+    <button class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
   <!-- HERO -->
@@ -331,6 +392,15 @@
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
     }, { threshold: 0.12 });
     reveals.forEach(el => observer.observe(el));
+
+    function toggleNav() {
+      document.getElementById('nav-links').classList.toggle('open');
+      document.getElementById('hamburger').classList.toggle('open');
+    }
+    function closeNav() {
+      document.getElementById('nav-links').classList.remove('open');
+      document.getElementById('hamburger').classList.remove('open');
+    }
   </script>
 
 </body>
