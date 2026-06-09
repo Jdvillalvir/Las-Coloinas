@@ -9,14 +9,21 @@
     :root { --black:#0a0a0a; --dark:#111111; --charcoal:#1a1a1a; --red:#8b1a1a; --red2:#a52020; --white:#f5f0eb; --dim:rgba(245,240,235,0.6); --white-dim:rgba(245,240,235,0.6); --border:rgba(245,240,235,0.12); }
     *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
     body { background:var(--black); color:var(--white); font-family:'Montserrat',sans-serif; font-weight:300; min-height:100vh; }
-    header { background:var(--dark); border-bottom:1px solid var(--border); padding:1.5rem 3rem; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:50; }
-    .logo { font-family:'Cormorant Garamond',serif; line-height:1; }
-    .logo small { display:block; font-family:'Montserrat',sans-serif; font-size:.6rem; letter-spacing:.38em; text-transform:uppercase; color:var(--dim); font-weight:300; }
-    .logo strong { font-size:1.2rem; font-weight:600; letter-spacing:.1em; }
+    header {
+      background:rgba(10,10,10,0.97);
+      padding:0 2.5rem;
+      display:flex; align-items:center; justify-content:space-between;
+      position:sticky; top:0; z-index:50;
+      backdrop-filter:blur(8px);
+      gap:1rem;
+    }
+    .logo-img { display:flex; align-items:center; text-decoration:none; flex-shrink:0; }
+    .logo-img img { height:110px; width:auto; display:block; mix-blend-mode:screen; filter:brightness(1.2) contrast(1.05); opacity:0.98; }
+    .header-right { display:flex; align-items:center; gap:1.2rem; }
     .back { display:flex; align-items:center; gap:.5rem; color:var(--dim); text-decoration:none; font-size:.6rem; letter-spacing:.22em; text-transform:uppercase; transition:color .3s; }
     .back:hover { color:var(--white); }
     .back svg { width:14px; height:14px; stroke:currentColor; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
-    .hero { padding:4.5rem 3rem 3rem; text-align:center; background:linear-gradient(160deg,#0a0a0a 0%,#141010 60%,#0a0a0a 100%); border-bottom:1px solid var(--border); position:relative; overflow:hidden; }
+    .hero { padding:1.5rem 2.5rem 1.2rem; text-align:center; background:linear-gradient(160deg,#0a0a0a 0%,#141010 60%,#0a0a0a 100%);  position:relative; overflow:hidden; }
     .hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 70% 60% at 50% 100%,rgba(139,26,26,.15) 0%,transparent 70%); }
     .eyebrow { font-size:.58rem; letter-spacing:.45em; text-transform:uppercase; color:#a52020; margin-bottom:1rem; display:flex; align-items:center; justify-content:center; gap:1rem; position:relative; }
     .eyebrow::before, .eyebrow::after { content:''; width:2rem; height:1px; background:var(--red); opacity:.5; }
@@ -30,20 +37,31 @@
     .pi img { width:100%; display:block; object-fit:contain; filter:saturate(.75) brightness(.82) contrast(1.05); transition:transform .6s, filter .4s; }
     .pc:hover .pi img { transform:scale(1.04); filter:saturate(.9) brightness(.88) contrast(1.05); }
     .po { position:absolute; inset:0; background:linear-gradient(to top,rgba(10,6,6,.72) 0%,rgba(10,6,6,.1) 50%,transparent 100%); pointer-events:none; }
-    .pf { padding:1.6rem 1.8rem 2rem; display:flex; flex-direction:column; gap:.9rem; border-top:1px solid var(--border); flex:1; }
+    .pf { padding:1.6rem 1.8rem 2rem; display:flex; flex-direction:column; gap:.9rem;  flex:1; }
     .pf h3 { font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-weight:400; line-height:1.1; }
     .pp { display:flex; align-items:baseline; gap:.4rem; }
     .pn { font-family:'Cormorant Garamond',serif; font-size:1.7rem; font-weight:600; }
     .pu { font-size:.6rem; letter-spacing:.2em; text-transform:uppercase; color:var(--dim); }
-    footer { border-top:1px solid var(--border); padding:2rem 3rem; text-align:center; font-size:.55rem; letter-spacing:.2em; text-transform:uppercase; color:rgba(245,240,235,.2); }
+    footer {  padding:2rem 3rem; text-align:center; font-size:.55rem; letter-spacing:.2em; text-transform:uppercase; color:rgba(245,240,235,.2); }
     .wa-float { position:fixed; bottom:1.8rem; right:1.8rem; z-index:150; display:flex; align-items:center; gap:.6rem; background:#25D366; color:#fff; text-decoration:none; padding:.65rem 1.2rem .65rem .85rem; border-radius:50px; font-family:'Montserrat',sans-serif; font-size:.62rem; font-weight:500; letter-spacing:.1em; text-transform:uppercase; box-shadow:0 4px 20px rgba(37,211,102,.35); transition:transform .25s; }
     .wa-float:hover { transform:translateY(-3px); }
     .wa-float svg { width:1.2rem; height:1.2rem; }
-    @media(max-width:600px) { header, .hero { padding-left:1.5rem; padding-right:1.5rem; } .grid { grid-template-columns:1fr; padding:2rem 1.5rem 4rem; } }
+    @media(max-width:768px) {
+      header { padding:0 1.2rem; }
+      .logo-img img { height:80px; }
+      .back span { display:none; }
+      .grid { grid-template-columns:1fr; padding:2rem 1.2rem 4rem; }
+      .hero { padding:1.2rem 1.2rem 1rem; }
+    }
+    @media(max-width:480px) {
+      header { padding:0 1rem; }
+      .logo-img img { height:65px; }
+      .grid { padding:1.5rem .9rem 3rem; }
+    }
 
     /* CART BUTTON */
-    .cart-btn { position:fixed; top:1.5rem; right:2rem; z-index:200; background:var(--red); color:var(--white); border:none; padding:.6rem 1.2rem; border-radius:2px; font-family:'Montserrat',sans-serif; font-size:.62rem; letter-spacing:.2em; text-transform:uppercase; cursor:pointer; display:flex; align-items:center; gap:.6rem; transition:background .3s; }
-    .cart-btn:hover { background:var(--red2); }
+    .cart-btn { position:fixed; bottom:5.2rem; right:1.8rem; z-index:150; background:var(--red); color:var(--white); border:none; padding:.6rem 1.1rem; font-family:'Montserrat',sans-serif; font-size:.6rem; font-weight:500; letter-spacing:.18em; text-transform:uppercase; cursor:pointer; display:flex; align-items:center; gap:.45rem; border-radius:50px; box-shadow:0 4px 20px rgba(139,26,26,.4); transition:background .3s, transform .25s; white-space:nowrap; }
+    .cart-btn:hover { background:var(--red2); transform:translateY(-3px); }
     .cart-count { background:var(--white); color:var(--red); border-radius:50%; width:1.2rem; height:1.2rem; font-size:.6rem; font-weight:600; display:flex; align-items:center; justify-content:center; }
 
     /* CART DRAWER */
@@ -51,7 +69,7 @@
     .cart-overlay.open { opacity:1; pointer-events:all; }
     .cart-drawer { position:fixed; top:0; right:0; width:min(420px,100vw); height:100vh; background:var(--dark); border-left:1px solid var(--border); z-index:301; transform:translateX(100%); transition:transform .35s ease; display:flex; flex-direction:column; }
     .cart-drawer.open { transform:translateX(0); }
-    .cart-header { padding:1.8rem 2rem; border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; }
+    .cart-header { padding:1.8rem 2rem;  display:flex; align-items:center; justify-content:space-between; }
     .cart-header h2 { font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:400; }
     .cart-close { background:none; border:none; color:var(--white-dim); font-size:1.4rem; cursor:pointer; line-height:1; transition:color .2s; }
     .cart-close:hover { color:var(--white); }
@@ -64,7 +82,7 @@
     .qty-btn { background:var(--charcoal); border:1px solid var(--border); color:var(--white); width:1.8rem; height:1.8rem; cursor:pointer; font-size:.9rem; display:flex; align-items:center; justify-content:center; transition:background .2s; }
     .qty-btn:hover { background:var(--red); border-color:var(--red); }
     .qty-num { font-family:'Cormorant Garamond',serif; font-size:1.1rem; min-width:1.5rem; text-align:center; }
-    .cart-footer { padding:1.5rem 2rem; border-top:1px solid var(--border); }
+    .cart-footer { padding:1.5rem 2rem;  }
     .cart-total { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:1.2rem; }
     .cart-total span { font-size:.65rem; letter-spacing:.25em; text-transform:uppercase; color:var(--white-dim); }
     .cart-total strong { font-family:'Cormorant Garamond',serif; font-size:1.8rem; font-weight:600; }
