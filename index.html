@@ -124,8 +124,8 @@
     .hero-scroll {
       position: absolute;
       bottom: 1.8rem;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 0;
+      right: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -133,11 +133,12 @@
       opacity: 0;
       z-index: 3;
       animation: fadeUp 0.8s 1.4s ease forwards;
-      white-space: nowrap;
+      /* left:0 right:0 + align-items:center = centrado perfecto siempre */
     }
     .hero-scroll span {
       font-size: 0.5rem;
       letter-spacing: 0.38em;
+      text-indent: 0.38em;    /* compensa el letter-spacing para centrado óptico */
       text-transform: uppercase;
       color: var(--dim);
     }
@@ -167,7 +168,7 @@
       font-size: clamp(1.8rem, 5vw, 3rem);
       font-weight: 300; line-height: 1.2;
     }
-    .section-head { margin-bottom: 3rem; }
+    .section-head { margin-bottom: clamp(1.5rem, 4vw, 3rem); }
 
     /* ─── INTRO ──────────────────────────────────────── */
     .intro { padding: clamp(3.5rem, 9vw, 7rem) 0; }
@@ -242,7 +243,7 @@
       background: var(--dark);
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
-      padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(4rem, 9vw, 8rem);
+      padding: clamp(2.5rem, 6vw, 5rem) 0 clamp(3rem, 7vw, 6rem);
     }
     .menu-grid {
       display: grid;
@@ -255,6 +256,8 @@
       position: relative; overflow: hidden;
       transition: background 0.4s;
       text-decoration: none; color: inherit; display: block;
+      /* Espacio interno generoso en todos los lados */
+      box-sizing: border-box;
     }
     .menu-card:hover { background: #1f1a1a; }
     .menu-card-num {
@@ -429,34 +432,73 @@
         grid-template-columns: 1fr;
         gap: 2.5rem;
       }
-      .menu-grid { grid-template-columns: 1fr; gap: 1.5px; }
+      /* Menús: una columna pero con espacio visual entre cards */
+      .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;         /* espacio real entre las dos cards */
+      }
+      /* Las cards en mobile necesitan menos padding vertical */
+      .menu-card {
+        padding: clamp(1.8rem, 5vw, 2.5rem) clamp(1.5rem, 5vw, 2.5rem);
+      }
     }
 
     /* ─── RESPONSIVE: MÓVIL ≤ 768px ─────────────────── */
     @media (max-width: 768px) {
-      /* Móvil: logo algo más ancho para mejor lectura */
+      /* Hero: padding más amplio para que el logo no quede pegado al nav */
+      .hero { padding: 5rem 0 4rem; }
+
+      /* Logo: 90vw en móvil */
       .hero-img {
         width: 90vw;
         max-width: 100%;
       }
-      /* Más espacio entre secciones en móvil */
-      .intro { padding: 3rem 0; }
-      .menus { padding: 2.8rem 0 3.8rem; }
-      .locations { padding: 3rem 0; }
-      .delivery { padding: 3rem 0; }
-      .section-head { margin-bottom: 2rem; }
-      /* Footer apilado */
-      footer { flex-direction: column; align-items: center; text-align: center; }
+
+      /* Secciones: espaciado generoso */
+      .intro    { padding: clamp(2.5rem, 7vw, 4rem) 0; }
+      .menus    { padding: clamp(2rem, 6vw, 3.5rem) 0 clamp(2.5rem, 7vw, 4rem); }
+      .locations{ padding: clamp(2.5rem, 7vw, 4rem) 0; }
+      .delivery { padding: clamp(2.5rem, 7vw, 4rem) 0; }
+
+      /* Cards de menú en móvil: padding cómodo */
+      .menu-card {
+        padding: 2rem 1.5rem;
+      }
+
+      /* Botones: tamaño táctil cómodo */
+      .btn-red {
+        display: block;
+        text-align: center;
+        padding: 1rem 1.5rem;
+        font-size: 0.65rem;
+      }
+
+      /* Footer apilado y centrado */
+      footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.2rem;
+      }
     }
 
     /* ─── RESPONSIVE: MÓVIL PEQUEÑO ≤ 480px ─────────── */
     @media (max-width: 480px) {
+      /* Hero padding top para el nav */
+      .hero { padding-top: 4rem; }
+
       .hero-img { width: 95vw; }
+
       /* WA botón: solo icono */
       .wa-label { display: none; }
       .wa-float { padding: 0.78rem; border-radius: 50%; }
+
       /* Stats compactos */
       .intro-stats { gap: 0.8rem; }
+
+      /* Menú cards: padding mínimo pero legible */
+      .menu-card { padding: 1.6rem 1.2rem; }
+      .menu-card-num { font-size: 3rem; top: 0.6rem; right: 0.8rem; }
     }
   </style>
 </head>
