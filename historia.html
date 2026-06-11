@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestra Historia | Hacienda Las Colinas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--black:#0a0a0a;--dark:#111111;--charcoal:#1a1a1a;--red:#8b1a1a;--red-light:#a52020;--white:#f5f0eb;--dim:rgba(245,240,235,.6);--border:rgba(245,240,235,.12);--px:clamp(1.2rem,5vw,4rem);--max:1200px}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--black);color:var(--white);font-family:'Montserrat',sans-serif;font-weight:300;overflow-x:hidden}
+    .wrap{width:100%;max-width:var(--max);margin:auto;padding-left:var(--px);padding-right:var(--px)}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;background:linear-gradient(to bottom,rgba(10,10,10,.96),transparent);backdrop-filter:blur(4px)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding-top:1.1rem;padding-bottom:1.1rem}
+    .nav-logo{display:flex;flex-direction:column;line-height:1.2;gap:.1rem;text-decoration:none;color:inherit}
+    .nav-logo .eye{font-family:'Cormorant Garamond',serif;font-size:clamp(.55rem,1.4vw,.68rem);letter-spacing:.38em;text-transform:uppercase;color:var(--dim)}
+    .nav-logo .name{font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,2.6vw,1.25rem);font-weight:600;letter-spacing:.1em;color:var(--white)}
+    .nav-links{display:flex;gap:clamp(1.2rem,3vw,2.6rem);list-style:none}
+    .nav-links a{color:var(--dim);text-decoration:none;font-size:clamp(.58rem,1.4vw,.65rem);letter-spacing:.22em;text-transform:uppercase;transition:color .3s}
+    .nav-links a:hover{color:var(--white)}
+    .hero{min-height:72vh;display:flex;align-items:center;background:radial-gradient(ellipse 70% 60% at 75% 30%,rgba(139,26,26,.16) 0%,transparent 65%),linear-gradient(160deg,#0a0a0a 0%,#141010 58%,#0a0a0a 100%);border-bottom:1px solid var(--border);position:relative;overflow:hidden;padding-top:6rem}
+    .hero::before{content:'';position:absolute;inset:0;background:linear-gradient(to right,var(--black) 0%,transparent 18%,transparent 82%,var(--black) 100%),radial-gradient(circle at center,rgba(245,240,235,.045) 0%,transparent 55%);pointer-events:none}
+    .hero-content{position:relative;max-width:850px}
+    .eyebrow{font-size:.6rem;letter-spacing:.45em;text-transform:uppercase;color:var(--red-light);margin-bottom:1.3rem;display:flex;align-items:center;gap:1rem}
+    .eyebrow::before{content:'';width:2rem;height:1px;background:var(--red)}
+    h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,8vw,6.5rem);font-weight:300;line-height:.95;margin-bottom:1.8rem}
+    h1 em{font-style:italic;color:var(--dim)}
+    .lead{max-width:720px;color:var(--dim);font-size:clamp(.85rem,2vw,1rem);line-height:2}
+    .story{padding:clamp(4rem,8vw,7rem) 0}
+    .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,7vw,7rem);align-items:start}
+    .story-card{background:var(--charcoal);border:1px solid var(--border);border-left:3px solid var(--red);padding:clamp(2rem,5vw,3.2rem);position:sticky;top:7rem}
+    .story-card .label{font-size:.58rem;letter-spacing:.4em;text-transform:uppercase;color:var(--red-light);margin-bottom:1.1rem}
+    .story-card h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:300;line-height:1.1;margin-bottom:1.2rem}
+    .story-card p,.story-copy p{color:var(--dim);line-height:1.95;font-size:.86rem;margin-bottom:1.2rem}
+    .story-copy h3{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:400;margin:2rem 0 1rem}
+    .values{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;margin-top:3rem;border:1px solid var(--border);background:var(--border)}
+    .value{background:var(--charcoal);padding:2rem}
+    .value span{display:block;color:var(--red-light);font-family:'Cormorant Garamond',serif;font-size:2.2rem;margin-bottom:.6rem}
+    .value strong{display:block;font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;margin-bottom:.7rem}
+    .value p{font-size:.75rem;line-height:1.8;color:var(--dim)}
+    .cta-row{margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:.8rem;padding:.95rem 1.35rem;color:var(--white);text-decoration:none;font-size:.62rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;border:1px solid rgba(245,240,235,.2);transition:transform .25s,box-shadow .25s,color .25s}
+    .btn-red{background:linear-gradient(135deg,var(--red),var(--red-light));box-shadow:0 12px 35px rgba(139,26,26,.35)}
+    .btn-dark{background:transparent;color:var(--dim)}
+    .btn:hover{transform:translateY(-3px);color:var(--white)}
+    footer{border-top:1px solid var(--border);padding:2rem var(--px);text-align:center;color:rgba(245,240,235,.24);font-size:.56rem;letter-spacing:.18em;text-transform:uppercase}
+    @media(max-width:800px){.nav-links{gap:1rem}.story-grid,.values{grid-template-columns:1fr}.story-card{position:relative;top:auto}.hero{min-height:auto;padding:7rem 0 4rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap nav-inner">
+      <a class="nav-logo" href="index.html#menu" aria-label="Volver al menú">
+        <span class="eye">Hacienda</span>
+        <span class="name">Las Colinas</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#nosotros">Nosotros</a></li>
+        <li><a href="index.html#menu">Menú</a></li>
+        <li><a href="menu-productos.html">Productos</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section class="hero">
+    <div class="wrap hero-content">
+      <div class="eyebrow">Nuestra historia</div>
+      <h1>Tradición, calidad y <em>confianza</em></h1>
+      <p class="lead">Hacienda Las Colinas nace con el propósito de ofrecer carnes seleccionadas, cortes de alta calidad y una experiencia cercana para las familias hondureñas.</p>
+      <div class="cta-row">
+        <a class="btn btn-red" href="menu-productos.html">Ver productos</a>
+        <a class="btn btn-dark" href="index.html#menu">Volver al menú</a>
+      </div>
+    </div>
+  </section>
+  <main class="story">
+    <div class="wrap story-grid">
+      <aside class="story-card">
+        <div class="label">Procesado por DIPRO</div>
+        <h2>Carne premium para cada mesa hondureña.</h2>
+        <p>Nuestro compromiso está en la selección cuidadosa, el servicio atento y la presentación de productos que inspiran confianza desde el primer contacto.</p>
+      </aside>
+      <section class="story-copy">
+        <p>Desde sus inicios, Hacienda Las Colinas fue concebida como una marca enfocada en elevar la experiencia de compra de carne, combinando productos importados y nacionales con una atención dinámica, moderna y confiable.</p>
+        <p>Creemos que una buena carne no solo se mide por su corte, sino por el cuidado con el que se procesa, se conserva y llega hasta el cliente final.</p>
+        <h3>Nuestro compromiso</h3>
+        <p>Trabajamos para mantener una oferta variada, fresca y consistente, pensada para hogares, reuniones familiares, restaurantes y clientes que buscan calidad sin complicaciones.</p>
+        <h3>Una marca con visión</h3>
+        <p>Queremos ser reconocidos como una carnicería diferente: elegante, accesible, confiable y con una imagen que represente excelencia en cada detalle.</p>
+        <div class="values">
+          <div class="value"><span>01</span><strong>Calidad</strong><p>Cortes seleccionados y productos pensados para una mejor experiencia.</p></div>
+          <div class="value"><span>02</span><strong>Servicio</strong><p>Atención cercana, rápida y enfocada en facilitar la compra.</p></div>
+          <div class="value"><span>03</span><strong>Confianza</strong><p>Una marca respaldada por procesos cuidadosos y presentación premium.</p></div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>Hacienda Las Colinas — Procesado por DIPRO</footer>
+</body>
+</html>
