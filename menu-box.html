@@ -138,7 +138,432 @@
       .box-body { padding:1.2rem; }
       .hero h1 { font-size:clamp(1.8rem,9vw,2.8rem); }
     }
-  </style>
+  
+
+/* ==========================================================
+   RESPONSIVE UX PATCH — Hacienda Las Colinas
+   Ajustes para escritorio, tablet y teléfono móvil
+   ========================================================== */
+
+img, video, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+}
+
+a, button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+.btn,
+.btn-red,
+.back,
+.history-cta,
+.prod-add-btn,
+.cart-wa-btn,
+.wa-float,
+.cart-btn {
+  touch-action: manipulation;
+}
+
+/* Evita que textos largos rompan el layout */
+p, h1, h2, h3, h4, h5, h6, a, span, li, div {
+  overflow-wrap: anywhere;
+}
+
+/* Desktop amplio */
+@media (min-width: 1200px) {
+  .wrap {
+    max-width: 1200px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  :root {
+    --px: clamp(1rem, 4vw, 2.5rem);
+  }
+
+  header,
+  .nav-inner {
+    padding-left: var(--px) !important;
+    padding-right: var(--px) !important;
+  }
+
+  .grid,
+  .menu-grid,
+  .locations-grid,
+  .delivery-grid,
+  .intro-grid,
+  .story-difference-grid,
+  .story-value-flow,
+  .story-genetics-grid {
+    gap: 1.25rem;
+  }
+
+  .grid {
+    padding-left: var(--px) !important;
+    padding-right: var(--px) !important;
+  }
+
+  .hero-content {
+    padding-left: var(--px) !important;
+    padding-right: var(--px) !important;
+  }
+}
+
+/* Mobile general */
+@media (max-width: 768px) {
+  :root {
+    --px: 1rem;
+  }
+
+  nav,
+  header {
+    position: sticky !important;
+    top: 0;
+  }
+
+  .nav-inner,
+  header,
+  .header-right {
+    gap: .8rem !important;
+  }
+
+  .nav-inner {
+    flex-wrap: wrap;
+    justify-content: center !important;
+    text-align: center;
+  }
+
+  .nav-logo,
+  .logo,
+  .logo-img,
+  .header-logo {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .9rem !important;
+    padding-top: .4rem;
+  }
+
+  .nav-links a,
+  .nav a,
+  .back {
+    font-size: .56rem !important;
+    letter-spacing: .16em !important;
+  }
+
+  .logo img,
+  .logo-img img,
+  .header-logo img {
+    height: 70px !important;
+    max-width: min(62vw, 210px);
+    object-fit: contain;
+  }
+
+  .hero {
+    min-height: auto !important;
+    padding: 4.8rem 0 3rem !important;
+  }
+
+  .hero-img {
+    width: min(78vw, 360px) !important;
+    max-width: 100% !important;
+  }
+
+  .hero-content {
+    padding: 7rem var(--px) 4rem !important;
+  }
+
+  h1,
+  .hero h1 {
+    font-size: clamp(2.35rem, 12vw, 4rem) !important;
+    line-height: .96 !important;
+  }
+
+  h2,
+  .section-title,
+  .story-difference-title {
+    font-size: clamp(1.85rem, 9vw, 3rem) !important;
+    line-height: 1.08 !important;
+  }
+
+  p,
+  .lead,
+  .intro p,
+  .delivery p,
+  .story-difference-lead {
+    font-size: .82rem !important;
+    line-height: 1.75 !important;
+  }
+
+  .intro-grid,
+  .delivery-grid,
+  .locations-grid,
+  .grid,
+  .gallery,
+  .menu-grid,
+  .story-difference-grid,
+  .story-value-flow,
+  .story-process-line,
+  .story-genetics-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .section,
+  .intro,
+  .menus,
+  .locations,
+  .delivery,
+  .story-difference {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  .menu-card,
+  .pc,
+  .box-card,
+  .intro-card,
+  .hours-box,
+  .story-difference-panel,
+  .story-facts,
+  .story-value-card,
+  .story-genetic-card {
+    width: 100%;
+  }
+
+  .menu-card,
+  .pf,
+  .box-body,
+  .intro-card,
+  .hours-box,
+  .story-difference-panel,
+  .story-facts,
+  .story-value-card,
+  .story-genetic-card {
+    padding: 1.35rem !important;
+  }
+
+  .photo-card img,
+  .gallery img {
+    height: auto !important;
+    min-height: 260px;
+    max-height: 420px;
+    object-fit: cover;
+  }
+
+  .pi,
+  .box-img-wrap {
+    aspect-ratio: 4 / 3;
+  }
+
+  .pi img,
+  .box-img {
+    object-fit: contain !important;
+  }
+
+  .hours-row,
+  .story-fact-row {
+    display: block !important;
+    text-align: left;
+  }
+
+  .hours-time,
+  .story-fact-value {
+    display: block;
+    text-align: left !important;
+    margin-top: .35rem;
+  }
+
+  .prod-controls {
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: .7rem !important;
+  }
+
+  .prod-qty-wrap {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .prod-add-btn {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  .cart-drawer {
+    width: 100vw !important;
+  }
+
+  .cart-item {
+    align-items: flex-start !important;
+    flex-wrap: wrap;
+  }
+
+  .cart-item-controls {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .wa-float,
+  .cart-btn {
+    right: 1rem !important;
+  }
+
+  .wa-float {
+    bottom: 1rem !important;
+    padding: .78rem !important;
+    border-radius: 999px !important;
+  }
+
+  .wa-label,
+  .wa-float span {
+    display: none !important;
+  }
+
+  .cart-btn {
+    bottom: 4.8rem !important;
+    max-width: calc(100vw - 2rem);
+    justify-content: center;
+  }
+
+  footer {
+    padding-left: var(--px) !important;
+    padding-right: var(--px) !important;
+  }
+}
+
+/* Teléfonos pequeños */
+@media (max-width: 480px) {
+  :root {
+    --px: .9rem;
+  }
+
+  header {
+    padding-left: .9rem !important;
+    padding-right: .9rem !important;
+  }
+
+  .logo img,
+  .logo-img img,
+  .header-logo img {
+    height: 58px !important;
+    max-width: 58vw;
+  }
+
+  .header-right {
+    gap: .55rem !important;
+  }
+
+  .back span {
+    display: none !important;
+  }
+
+  .hero {
+    padding-top: 4rem !important;
+  }
+
+  .hero h1,
+  h1 {
+    font-size: clamp(2rem, 13vw, 3.2rem) !important;
+  }
+
+  .eyebrow,
+  .section-label,
+  .intro-label,
+  .label,
+  .box-eyebrow,
+  .includes-label {
+    letter-spacing: .24em !important;
+    font-size: .52rem !important;
+  }
+
+  .eyebrow::before,
+  .eyebrow::after,
+  .btn::before,
+  .btn::after,
+  .history-cta span::before,
+  .history-cta span::after {
+    width: 28px !important;
+  }
+
+  .grid {
+    padding-top: 1.5rem !important;
+    padding-bottom: 4rem !important;
+  }
+
+  .pf h3,
+  .box-name {
+    font-size: 1.35rem !important;
+  }
+
+  .pn,
+  .box-price {
+    font-size: 1.55rem !important;
+  }
+
+  .btn,
+  .btn-red,
+  .history-cta {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: .95rem 1rem !important;
+    letter-spacing: .18em !important;
+  }
+
+  .intro-stats {
+    grid-template-columns: 1fr !important;
+  }
+
+  .cart-header,
+  .cart-items,
+  .cart-footer {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .cart-btn {
+    font-size: .54rem !important;
+    letter-spacing: .12em !important;
+    padding: .65rem .85rem !important;
+  }
+}
+
+/* Landscape móvil */
+@media (max-width: 900px) and (orientation: landscape) {
+  .hero {
+    min-height: auto !important;
+  }
+
+  .hero-content {
+    padding-top: 5rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  .photo-card img,
+  .gallery img {
+    max-height: 320px;
+  }
+}
+
+</style>
 </head>
 <body>
 
