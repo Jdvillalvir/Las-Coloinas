@@ -1020,6 +1020,45 @@ body > header a.logo-img img {
   }
 }
 
+
+
+/* ==========================================================
+   AJUSTE FINAL LOGO MOBILE — igual al index.html
+   Este bloque debe quedar al final del CSS para sobreescribir reglas anteriores.
+   ========================================================== */
+:root {
+  --header-logo-h: clamp(56px, 7vw, 78px);
+}
+body > header .logo img,
+body > header .logo-img img,
+body > header a.logo img,
+body > header a.logo-img img {
+  height: var(--header-logo-h) !important;
+  width: auto !important;
+  max-width: min(58vw, 220px) !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+@media (max-width: 768px) {
+  :root { --header-logo-h: clamp(54px, 13vw, 72px); }
+  body > header .logo img,
+  body > header .logo-img img,
+  body > header a.logo img,
+  body > header a.logo-img img {
+    height: clamp(54px, 13vw, 72px) !important;
+    max-width: min(58vw, 220px) !important;
+  }
+}
+@media (max-width: 480px) {
+  :root { --header-logo-h: clamp(50px, 12.6vw, 60px); }
+  body > header .logo img,
+  body > header .logo-img img,
+  body > header a.logo img,
+  body > header a.logo-img img {
+    height: clamp(50px, 12.6vw, 60px) !important;
+    max-width: 56vw !important;
+  }
+}
 </style>
 </head>
 <body>
