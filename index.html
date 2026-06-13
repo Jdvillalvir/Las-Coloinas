@@ -1657,7 +1657,322 @@
       }
     }
 
-  </style>
+  
+/* ==========================================================
+   UX SR FINAL PATCH — centrado, simetría y responsive 100%
+   Generado para Hacienda Las Colinas
+   ========================================================== */
+:root { --safe-px: clamp(.9rem, 4vw, 2.75rem); }
+html, body { width:100%; max-width:100%; overflow-x:hidden !important; }
+body { text-rendering: optimizeLegibility; }
+img, picture, video, canvas, svg { max-width:100%; height:auto; }
+section, header, nav, main, footer { max-width:100%; }
+.wrap,
+.container,
+.hero-contenido,
+.hero-content,
+.section-head,
+.intro,
+.menus,
+.locations,
+.delivery,
+.story-difference,
+.story-genetics,
+.story-process,
+.story-value,
+.story-origin,
+.grid,
+.menu-grid,
+.locations-grid,
+.delivery-grid,
+.intro-grid,
+.gallery,
+.story-difference-grid,
+.story-process-line,
+.story-genetics-grid,
+.story-value-flow {
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+/* Alineación visual consistente */
+.hero,
+.hero-contenido,
+.hero-content,
+.section-head,
+.intro,
+.menus,
+.locations,
+.delivery,
+.story-difference,
+.story-genetics,
+.story-process,
+.story-value,
+.story-origin,
+footer { text-align:center !important; }
+
+.hero h1,
+.hero p,
+.hero-sub,
+.lead,
+.section-title,
+.section-subtitle,
+.story-difference-lead,
+.intro p,
+.delivery p { margin-left:auto !important; margin-right:auto !important; }
+
+.hero-eyebrow,
+.eyebrow,
+.section-label,
+.intro-label,
+.label,
+.box-eyebrow,
+.includes-label { justify-content:center !important; text-align:center !important; }
+.hero-eyebrow::before { content:''; width:2.4rem; height:1px; background:var(--red-vivo, var(--red)); margin-right:1.1rem; }
+.hero-eyebrow::after { margin-left:1.1rem !important; }
+
+.hero-acciones,
+.cta-row,
+.menu-actions,
+.actions,
+.buttons,
+.nav-der { justify-content:center !important; }
+
+/* Grids simétricos */
+.grid,
+.menu-grid,
+.locations-grid,
+.delivery-grid,
+.intro-grid,
+.gallery,
+.story-difference-grid,
+.story-process-line,
+.story-genetics-grid,
+.story-value-flow {
+  display:grid !important;
+  justify-content:center !important;
+  justify-items:center !important;
+  align-items:stretch !important;
+}
+.grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)) !important; }
+.menu-grid,
+.locations-grid,
+.delivery-grid,
+.intro-grid,
+.story-difference-grid,
+.story-genetics-grid,
+.story-value-flow { grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)) !important; }
+.gallery { grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)) !important; }
+
+.pc,
+.box-card,
+.menu-card,
+.intro-card,
+.hours-box,
+.location-card,
+.delivery-card,
+.story-difference-panel,
+.story-facts,
+.story-value-card,
+.story-genetic-card,
+.story-process-card {
+  width:100% !important;
+  max-width:420px;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  text-align:center !important;
+}
+
+.pf,
+.box-body,
+.menu-card,
+.intro-card,
+.hours-box,
+.location-card,
+.delivery-card,
+.story-difference-panel,
+.story-facts,
+.story-value-card,
+.story-genetic-card,
+.story-process-card {
+  align-items:center !important;
+}
+
+.pi,
+.box-img-wrap,
+.menu-img,
+.photo-card,
+.gallery figure { width:100% !important; }
+.pi img,
+.box-img,
+.menu-card img,
+.photo-card img,
+.gallery img,
+.hero-img,
+.hero-foto img {
+  max-width:100% !important;
+}
+.pi img,
+.box-img { object-fit:contain !important; object-position:center center !important; }
+
+/* Botones y controles centrados */
+.btn,
+.btn-red,
+.cta,
+.history-cta,
+.prod-add-btn,
+.cart-wa-btn,
+.nav-pedido,
+.back,
+.wa-float,
+.cart-btn {
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  text-align:center !important;
+}
+.prod-controls,
+.prod-qty-wrap,
+.box-price-wrap,
+.pp,
+.cart-total,
+.cart-item-controls { justify-content:center !important; }
+.prod-controls { width:100%; }
+
+/* Header de páginas menú: logo centrado y regreso alineado */
+body > header {
+  display:grid !important;
+  grid-template-columns: 1fr auto 1fr;
+  align-items:center !important;
+  justify-items:center !important;
+  padding-left:var(--safe-px) !important;
+  padding-right:var(--safe-px) !important;
+}
+body > header .logo,
+body > header .logo-img { grid-column:2; justify-self:center !important; }
+body > header .header-right { grid-column:3; justify-self:end !important; display:flex; align-items:center; justify-content:flex-end !important; }
+.logo img,
+.logo-img img { object-fit:contain !important; }
+
+/* Navegación home */
+.nav-inner { justify-content:center !important; text-align:center; }
+.nav-logo { justify-self:center; }
+.nav-links { justify-content:center !important; align-items:center; }
+.nav-links a { text-align:center; }
+
+@media (min-width: 1025px) {
+  .nav-inner { display:grid !important; grid-template-columns:1fr auto 1fr; }
+  .nav-logo { grid-column:1; justify-self:start; }
+  .nav-links { grid-column:2; }
+  .nav-der { grid-column:3; justify-self:end; }
+  .hero-contenido .wrap, .hero-content .wrap { display:flex; flex-direction:column; align-items:center; }
+}
+
+@media (max-width: 1024px) {
+  .wrap { padding-left:var(--safe-px) !important; padding-right:var(--safe-px) !important; }
+  .grid,
+  .menu-grid,
+  .locations-grid,
+  .delivery-grid,
+  .intro-grid,
+  .gallery,
+  .story-difference-grid,
+  .story-process-line,
+  .story-genetics-grid,
+  .story-value-flow {
+    gap:1.25rem !important;
+    padding-left:var(--safe-px) !important;
+    padding-right:var(--safe-px) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  body > header {
+    grid-template-columns: 1fr auto 1fr;
+    min-height:72px;
+    gap:.5rem !important;
+  }
+  .logo img,
+  .logo-img img,
+  .nav-logo img,
+  .header-logo img { height:clamp(54px, 14vw, 72px) !important; max-width:min(58vw, 220px) !important; }
+  body > header .header-right { max-width:100%; }
+
+  .nav-inner { flex-wrap:wrap !important; gap:.75rem !important; padding-left:var(--safe-px) !important; padding-right:var(--safe-px) !important; }
+  .nav-logo { width:100%; display:flex !important; justify-content:center !important; }
+  .nav-links { width:100%; flex-wrap:wrap !important; gap:.85rem !important; order:3; }
+  .nav-der { width:100%; flex-wrap:wrap; order:2; }
+  .nav-pedido { max-width:100%; }
+
+  .hero { min-height:auto !important; padding-left:0 !important; padding-right:0 !important; }
+  .hero-foto { position:relative !important; width:100% !important; min-height:260px; opacity:.72; }
+  .hero-foto::after { background:linear-gradient(to top, var(--black) 0%, rgba(10,10,10,.35) 55%, transparent 100%) !important; }
+  .hero-contenido,
+  .hero-content { padding:2.5rem var(--safe-px) 3rem !important; }
+  .hero h1 { max-width:12ch !important; }
+  .hero-sub, .hero p, .lead { max-width:56ch !important; }
+
+  .grid,
+  .menu-grid,
+  .locations-grid,
+  .delivery-grid,
+  .intro-grid,
+  .gallery,
+  .story-difference-grid,
+  .story-process-line,
+  .story-genetics-grid,
+  .story-value-flow { grid-template-columns:1fr !important; }
+
+  .pc,
+  .box-card,
+  .menu-card,
+  .intro-card,
+  .hours-box,
+  .location-card,
+  .delivery-card,
+  .story-difference-panel,
+  .story-facts,
+  .story-value-card,
+  .story-genetic-card,
+  .story-process-card { max-width:560px; }
+
+  .prod-controls { flex-direction:column !important; align-items:stretch !important; }
+  .prod-qty-wrap { width:100%; min-height:44px; }
+  .prod-add-btn { width:100%; min-height:44px; }
+  .cart-item { justify-content:center; text-align:center; }
+  .cart-total { text-align:center; flex-direction:column; align-items:center !important; gap:.35rem; }
+}
+
+@media (max-width: 480px) {
+  :root { --safe-px:.9rem; }
+  body > header { padding-left:.75rem !important; padding-right:.75rem !important; }
+  .hero h1 { font-size:clamp(2rem, 12vw, 3.2rem) !important; }
+  .hero-acciones,
+  .cta-row,
+  .menu-actions,
+  .actions,
+  .buttons { width:100%; }
+  .cta,
+  .btn,
+  .btn-red,
+  .history-cta,
+  .nav-pedido { width:100%; max-width:340px; }
+  .grid { padding-top:1.5rem !important; }
+  .pf,
+  .box-body,
+  .menu-card,
+  .intro-card,
+  .hours-box,
+  .location-card,
+  .delivery-card,
+  .story-difference-panel,
+  .story-facts,
+  .story-value-card,
+  .story-genetic-card,
+  .story-process-card { padding-left:1.1rem !important; padding-right:1.1rem !important; }
+}
+
+</style>
 </head>
 <body>
 
