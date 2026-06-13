@@ -1013,6 +1013,46 @@ body > header > .back {
   body > header a.logo img,
   body > header a.logo-img img { max-width: 56vw !important; }
 }
+
+
+/* ==========================================================
+   CORRECCIÓN FINAL — Logo superior igual al index
+   Mismo comportamiento que .nav-logo img del index.html
+   ========================================================== */
+:root {
+  --header-logo-h: clamp(56px, 7vw, 78px);
+}
+body > header .logo img,
+body > header .logo-img img,
+body > header a.logo img,
+body > header a.logo-img img {
+  height: var(--header-logo-h) !important;
+  width: auto !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+@media (max-width: 768px) {
+  :root { --header-logo-h: clamp(54px, 13vw, 72px); }
+  body > header .logo img,
+  body > header .logo-img img,
+  body > header a.logo img,
+  body > header a.logo-img img {
+    height: var(--header-logo-h) !important;
+    max-width: min(58vw, 220px) !important;
+  }
+}
+@media (max-width: 480px) {
+  :root { --header-logo-h: clamp(50px, 12.6vw, 60px); }
+  body > header .logo img,
+  body > header .logo-img img,
+  body > header a.logo img,
+  body > header a.logo-img img {
+    height: var(--header-logo-h) !important;
+    max-width: 56vw !important;
+  }
+}
+
 </style>
 </head>
 <body>
