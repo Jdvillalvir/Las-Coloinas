@@ -2123,9 +2123,243 @@ body > header .header-right { grid-column:3; justify-self:end !important; displa
   }
 }
 
+
+
+    /* ─── POP-UP COMERCIAL ─────────────────────────────── */
+    .comercial-popup {
+      position: fixed;
+      inset: 0;
+      z-index: 3000;
+      display: grid;
+      place-items: center;
+      padding: clamp(1rem, 4vw, 2rem);
+      background: rgba(0, 0, 0, 0.74);
+      backdrop-filter: blur(8px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+
+    .comercial-popup.is-visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .comercial-popup-card {
+      position: relative;
+      width: min(100%, 620px);
+      max-height: min(92svh, 760px);
+      overflow-y: auto;
+      background:
+        radial-gradient(120% 90% at 50% 0%, rgba(200,168,120,0.16), transparent 48%),
+        linear-gradient(145deg, #151211 0%, #0b0b0b 62%, #16100f 100%);
+      border: 1px solid rgba(200,168,120,0.34);
+      border-radius: 22px;
+      padding: clamp(1.5rem, 4.5vw, 2.5rem);
+      box-shadow: 0 30px 90px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.05);
+      transform: translateY(18px) scale(0.98);
+      transition: transform 0.35s ease;
+    }
+
+    .comercial-popup.is-visible .comercial-popup-card {
+      transform: translateY(0) scale(1);
+    }
+
+    .comercial-popup-close {
+      position: absolute;
+      top: 0.95rem;
+      right: 0.95rem;
+      width: 2.65rem;
+      height: 2.65rem;
+      border: 1px solid rgba(245,240,235,0.18);
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+      color: var(--white);
+      cursor: pointer;
+      font-size: 1.55rem;
+      line-height: 1;
+      transition: background 0.25s, border-color 0.25s, transform 0.25s;
+    }
+
+    .comercial-popup-close:hover {
+      background: rgba(139,26,26,0.35);
+      border-color: rgba(200,168,120,0.45);
+      transform: rotate(90deg);
+    }
+
+    .comercial-popup-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--gold);
+      font-size: clamp(0.56rem, 1.6vw, 0.66rem);
+      font-weight: 700;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .comercial-popup-eyebrow::after {
+      content: '';
+      width: 2.2rem;
+      height: 1px;
+      background: var(--red-vivo);
+    }
+
+    .comercial-popup h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: clamp(2rem, 6vw, 3.25rem);
+      line-height: 1.04;
+      color: var(--white);
+      margin-bottom: 1rem;
+      max-width: 12ch;
+    }
+
+    .comercial-popup-lead {
+      color: rgba(245,240,235,0.78);
+      font-size: clamp(0.82rem, 2.2vw, 0.96rem);
+      line-height: 1.85;
+      margin-bottom: 1.35rem;
+    }
+
+    .comercial-popup-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+      margin: 1.35rem 0;
+      list-style: none;
+    }
+
+    .comercial-popup-list li {
+      border: 1px solid rgba(245,240,235,0.10);
+      background: rgba(255,255,255,0.035);
+      border-radius: 14px;
+      padding: 0.85rem 0.95rem;
+      color: rgba(245,240,235,0.88);
+      font-size: 0.74rem;
+      line-height: 1.45;
+    }
+
+    .comercial-popup-list li::before {
+      content: '•';
+      color: var(--red-vivo);
+      margin-right: 0.45rem;
+      font-weight: 700;
+    }
+
+    .comercial-popup-question {
+      margin: 1.4rem 0 1.2rem;
+      padding: 1.05rem 1.1rem;
+      border-left: 3px solid var(--gold);
+      background: rgba(200,168,120,0.08);
+      color: rgba(245,240,235,0.86);
+      font-size: clamp(0.78rem, 2vw, 0.9rem);
+      line-height: 1.75;
+      font-style: italic;
+    }
+
+    .comercial-popup-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.85rem;
+      margin-top: 1.35rem;
+    }
+
+    .comercial-popup-btn {
+      min-height: 58px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      border-radius: 999px;
+      padding: 0.9rem 1rem;
+      text-decoration: none;
+      color: var(--white);
+      font-size: 0.66rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    }
+
+    .comercial-popup-btn:hover { transform: translateY(-2px); }
+
+    .comercial-popup-btn svg {
+      width: 1.25rem;
+      height: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .comercial-popup-btn.whatsapp {
+      background: #25D366;
+      box-shadow: 0 14px 38px rgba(37,211,102,0.24);
+    }
+
+    .comercial-popup-btn.email {
+      background: linear-gradient(135deg, var(--red) 0%, var(--red-light) 100%);
+      border: 1px solid rgba(200,168,120,0.35);
+      box-shadow: 0 14px 38px rgba(139,26,26,0.28);
+    }
+
+    .comercial-popup-response {
+      margin-top: 1.2rem;
+      color: rgba(245,240,235,0.64);
+      font-size: 0.75rem;
+      line-height: 1.75;
+      text-align: center;
+    }
+
+    .comercial-popup-response strong { color: var(--gold); font-weight: 600; }
+
+    body.popup-open { overflow: hidden; }
+
+    @media (max-width: 560px) {
+      .comercial-popup { padding: 0.85rem; align-items: end; }
+      .comercial-popup-card {
+        width: 100%;
+        border-radius: 22px 22px 14px 14px;
+        padding: 1.45rem 1.05rem 1.2rem;
+      }
+      .comercial-popup h2 { max-width: 11ch; }
+      .comercial-popup-list,
+      .comercial-popup-actions { grid-template-columns: 1fr; }
+      .comercial-popup-list { gap: 0.55rem; }
+      .comercial-popup-btn { min-height: 56px; }
+    }
+
 </style>
 </head>
 <body>
+
+  <!-- ── POP-UP COMERCIAL ─────────────────────────────── -->
+  <div class="comercial-popup" id="comercialPopup" role="dialog" aria-modal="true" aria-labelledby="comercialPopupTitle" aria-hidden="true">
+    <div class="comercial-popup-card" role="document">
+      <button class="comercial-popup-close" type="button" id="comercialPopupClose" aria-label="Cerrar ventana">×</button>
+      <p class="comercial-popup-eyebrow">Área comercial</p>
+      <h2 id="comercialPopupTitle">Información para negocios</h2>
+      <p class="comercial-popup-lead">Atendemos consultas comerciales relacionadas con Hacienda Las Colinas.</p>
+      <ul class="comercial-popup-list" aria-label="Temas comerciales disponibles">
+        <li>Ventas mayoreo</li>
+        <li>Proveedores</li>
+        <li>Información de productos</li>
+        <li>Solicitudes relacionadas al área comercial de negocio</li>
+      </ul>
+      <p class="comercial-popup-question">¿Eres carnicería, restaurante o distribuidor? Escríbenos para precios, venta directa, pedidos, catálogo de productos y disponibilidad al detalle y por mayor.</p>
+      <div class="comercial-popup-actions">
+        <a class="comercial-popup-btn whatsapp" href="https://wa.me/50489973353" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp a Hacienda Las Colinas">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 4.5C9.65 4.5 4.5 9.65 4.5 16c0 2.18.6 4.23 1.64 5.99L4.5 27.5l5.7-1.62A11.46 11.46 0 0 0 16 27.5c6.35 0 11.5-5.15 11.5-11.5S22.35 4.5 16 4.5Zm5.72 16.4c-.24.67-1.38 1.28-1.88 1.34-.47.06-1.07.08-1.72-.11-.4-.12-.9-.28-1.55-.55-2.72-1.18-4.5-3.9-4.63-4.08-.13-.18-1.07-1.42-1.07-2.71 0-1.29.68-1.92.92-2.18.24-.26.52-.33.7-.33.17 0 .35 0 .5.01.16.01.38-.06.59.45.22.52.74 1.81.8 1.94.07.13.11.28.02.45-.08.17-.13.28-.26.43-.13.15-.27.34-.39.45-.13.12-.26.25-.11.49.15.24.66 1.09 1.42 1.76.98.87 1.8 1.14 2.05 1.27.25.13.39.11.53-.06.15-.17.62-.72.79-.97.17-.25.33-.21.56-.12.22.08 1.41.67 1.65.79.24.12.4.18.46.28.06.1.06.57-.18 1.24Z" fill="currentColor"/></svg>
+          WhatsApp
+        </a>
+        <a class="comercial-popup-btn email" href="mailto:ventas@haciendalascolinas.net?subject=Consulta%20comercial%20Hacienda%20Las%20Colinas" aria-label="Enviar correo a ventas@haciendalascolinas.net">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6.5h16v11H4v-11Z" stroke="currentColor" stroke-width="1.7"/><path d="m4.7 7.2 7.3 5.6 7.3-5.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Correo
+        </a>
+      </div>
+      <p class="comercial-popup-response"><strong>Tiempo de respuesta:</strong> te respondemos lo más pronto posible, de 1 a 1 hora y media. Gracias por estar en contacto con nosotros.</p>
+    </div>
+  </div>
+
 
   <!-- ── NAV ──────────────────────────────────────────── -->
   <nav>
@@ -2554,6 +2788,34 @@ body > header .header-right { grid-column:3; justify-self:end !important; displa
     }
     burger.addEventListener('click', () => toggleMenu());
     menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleMenu(true)));
+
+    // Pop-up comercial al ingresar
+    const comercialPopup = document.getElementById('comercialPopup');
+    const comercialPopupClose = document.getElementById('comercialPopupClose');
+
+    function cerrarPopupComercial() {
+      comercialPopup.classList.remove('is-visible');
+      comercialPopup.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('popup-open');
+    }
+
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        comercialPopup.classList.add('is-visible');
+        comercialPopup.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('popup-open');
+        comercialPopupClose.focus({ preventScroll: true });
+      }, 450);
+    });
+
+    comercialPopupClose.addEventListener('click', cerrarPopupComercial);
+    comercialPopup.addEventListener('click', (event) => {
+      if (event.target === comercialPopup) cerrarPopupComercial();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && comercialPopup.classList.contains('is-visible')) cerrarPopupComercial();
+    });
+
   </script>
 </body>
 </html>
