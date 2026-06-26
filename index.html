@@ -2291,6 +2291,10 @@ body > header .header-right { grid-column:3; justify-self:end !important; displa
   <section class="menus" id="menu">
     <style>
       /* Ajuste exclusivo para la sección de menús */
+      #menu .section-head {
+        text-align: center !important;
+      }
+
       #menu .menu-grid {
         display: grid !important;
         grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
@@ -2317,24 +2321,31 @@ body > header .header-right { grid-column:3; justify-self:end !important; displa
       }
 
       #menu .menu-card-title {
-        display: inline-flex;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: clamp(0.65rem, 1vw, 0.9rem);
+        gap: clamp(0.85rem, 1.3vw, 1.1rem);
         margin-bottom: 0.9rem;
       }
 
       #menu .menu-card-title svg {
-        width: 1.1em;
-        height: 1.1em;
+        width: clamp(54px, 4.4vw, 72px) !important;
+        height: clamp(54px, 4.4vw, 72px) !important;
         flex: 0 0 auto;
+        display: block;
         color: var(--gold);
         stroke: currentColor;
-        stroke-width: 1.7;
+        stroke-width: 2.15;
+        stroke-linecap: round;
+        stroke-linejoin: round;
       }
 
       #menu .menu-card-title h3 {
+        width: 100%;
         margin: 0 !important;
+        text-align: center !important;
         line-height: 1.05;
       }
 
@@ -2386,7 +2397,7 @@ body > header .header-right { grid-column:3; justify-self:end !important; displa
               <path d="M46 22c5-3 8-8 7-13-5 0-10 2-14 6"/>
               <path d="M14 35c0-12 8-21 18-21s18 9 18 21c0 11-8 18-18 18s-18-7-18-18Z"/>
               <path d="M23 38c0-5 4-8 9-8s9 3 9 8-4 8-9 8-9-3-9-8Z"/>
-              <path d="M28 38h.1M36 38h.1M25 28h.1M39 28h.1" stroke-linecap="round"/>
+              <path d="M28 38h.1M36 38h.1M25 28h.1M39 28h.1"/>
             </svg>
             <h3>Men&uacute; Cerdo</h3>
           </div>
@@ -2403,7 +2414,7 @@ body > header .header-right { grid-column:3; justify-self:end !important; displa
               <path d="M46 22c6-1 10-5 13-10-7-1-13 1-17 6"/>
               <path d="M16 34c0-12 7-21 16-21s16 9 16 21c0 12-7 19-16 19s-16-7-16-19Z"/>
               <path d="M24 40c0-5 3-8 8-8s8 3 8 8-3 8-8 8-8-3-8-8Z"/>
-              <path d="M27 40h.1M37 40h.1M25 29h.1M39 29h.1" stroke-linecap="round"/>
+              <path d="M27 40h.1M37 40h.1M25 29h.1M39 29h.1"/>
               <path d="M19 19c-1-5 0-9 3-13M45 19c1-5 0-9-3-13"/>
             </svg>
             <h3>Men&uacute; Res</h3>
