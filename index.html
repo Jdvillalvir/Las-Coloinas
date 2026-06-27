@@ -2353,6 +2353,18 @@ body > header .header-right { grid-column:3; justify-self:end !important; displa
       .comercial-popup-response { font-size: 0.58rem; }
     }
 
+
+
+/* ─── AJUSTE FINAL: TEXTO MÁS VISIBLE + CONFIANZA ─── */
+html { font-size: 19px; }
+.confianza-item h3 { font-size: clamp(0.82rem, 1.65vw, 0.95rem) !important; line-height: 1.35 !important; }
+.confianza-item p { font-size: clamp(0.72rem, 1.45vw, 0.82rem) !important; line-height: 1.45 !important; }
+@media (max-width: 540px) {
+  html { font-size: 18px; }
+  .confianza-item h3 { font-size: 0.82rem !important; letter-spacing: 0.12em !important; }
+  .confianza-item p { font-size: 0.72rem !important; }
+}
+
 </style>
 </head>
 <body>
@@ -2362,7 +2374,7 @@ body > header .header-right { grid-column:3; justify-self:end !important; displa
     <div class="comercial-popup-card" role="document">
       <button class="comercial-popup-close" type="button" id="comercialPopupClose" aria-label="Cerrar ventana">×</button>
       <p class="comercial-popup-eyebrow">Área comercial</p>
-      <h2 id="comercialPopupTitle">Atención</h2>
+      <h2 id="comercialPopupTitle">Atención Comercial</h2>
       <p class="comercial-popup-lead">Un canal directo para ventas, productos, proveedores y solicitudes comerciales.</p>
       <ul class="comercial-popup-list" aria-label="Temas comerciales disponibles">
         <li>Ventas mayoreo</li>
@@ -2455,8 +2467,8 @@ body > header .header-right { grid-column:3; justify-self:end !important; displa
         <div class="confianza-item">
           <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 18c-3 0-5-2-5-5h6m27 5c3 0 5-2 5-5h-6M14 18h20l3 8v6c0 2-1 4-3 4h-2l-2 6h-3l-1-6H22l-1 6h-3l-2-6h-2c-2 0-3-2-3-4v-6l3-8Z"/><circle cx="20" cy="27" r="1.4" fill="currentColor" stroke="none"/><circle cx="28" cy="27" r="1.4" fill="currentColor" stroke="none"/></svg>
           <div>
-            <h3>Carne 100% de Res</h3>
-            <p>De la mejor selección</p>
+            <h3>Carne de cerdo y res</h3>
+            <p>100% fresca, nacional.</p>
           </div>
         </div>
         <div class="confianza-item">
