@@ -1,0 +1,2308 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>Menú Carne de Cerdo — Hacienda Las Colinas</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root { --black:#0a0a0a; --dark:#111111; --charcoal:#1a1a1a; --red:#8b1a1a; --red2:#a52020; --white:#f5f0eb; --dim:rgba(245,240,235,0.6); --white-dim:rgba(245,240,235,0.6); --border:rgba(245,240,235,0.12); }
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--black); color:var(--white); font-family:'Montserrat',sans-serif; font-weight:300; min-height:100vh; }
+    header {
+      background:rgba(10,10,10,0.97);
+      padding:0 2.5rem;
+      display:flex; align-items:center; justify-content:space-between;
+      position:sticky; top:0; z-index:50;
+      backdrop-filter:blur(8px);
+      gap:1rem;
+    }
+    .logo-img { display:flex; align-items:center; text-decoration:none; flex-shrink:0; }
+
+    .logo { display:flex; align-items:center; text-decoration:none; cursor:pointer; flex-shrink:0; }
+    .logo img { height:110px; width:auto; display:block; mix-blend-mode:screen; filter:brightness(1.2) contrast(1.05); opacity:0.98; }
+    .logo:hover { opacity:.9; }
+
+    .logo-img img { height:110px; width:auto; display:block; mix-blend-mode:screen; filter:brightness(1.2) contrast(1.05); opacity:0.98; }
+    .header-right { display:flex; align-items:center; gap:1.2rem; }
+    .back { display:flex; align-items:center; gap:.5rem; color:var(--dim); text-decoration:none; font-size:.6rem; letter-spacing:.22em; text-transform:uppercase; transition:color .3s; }
+    .back:hover { color:var(--white); }
+    .back svg { width:14px; height:14px; stroke:currentColor; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+    .hero { padding:1.5rem 2.5rem 1.2rem; text-align:center; background:linear-gradient(160deg,#0a0a0a 0%,#141010 60%,#0a0a0a 100%);  position:relative; overflow:hidden; }
+    .hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 70% 60% at 50% 100%,rgba(139,26,26,.15) 0%,transparent 70%); }
+    .eyebrow { font-size:.58rem; letter-spacing:.45em; text-transform:uppercase; color:#a52020; margin-bottom:1rem; display:flex; align-items:center; justify-content:center; gap:1rem; position:relative; }
+    .eyebrow::before, .eyebrow::after { content:''; width:2rem; height:1px; background:var(--red); opacity:.5; }
+    .hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(2.2rem,6vw,4.5rem); font-weight:300; line-height:1; position:relative; }
+    .hero h1 em { font-style:italic; color:var(--dim); }
+    .hero p { margin-top:1rem; font-size:.75rem; letter-spacing:.1em; color:var(--dim); position:relative; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.5px; padding:4rem 3rem 7rem; max-width:1280px; margin:0 auto; }
+    .pc { background:var(--charcoal); border:1px solid var(--border); overflow:hidden; display:flex; flex-direction:column; transition:border-color .4s; }
+    .pc:hover { border-color:rgba(139,26,26,.5); }
+    .pi { position:relative; overflow:hidden; background:#0a0a0a; aspect-ratio:4/3; }
+    .pi img { width:100%; height:100%; display:block; object-fit:contain; object-position:center; filter:saturate(.75) brightness(.82) contrast(1.05); transition:transform .6s, filter .4s; }
+    .pc:hover .pi img { transform:scale(1.04); filter:saturate(.9) brightness(.88) contrast(1.05); }
+    .po { position:absolute; inset:0; background:linear-gradient(to top,rgba(10,6,6,.72) 0%,rgba(10,6,6,.1) 50%,transparent 100%); pointer-events:none; }
+    .pf { padding:1.6rem 1.8rem 2rem; display:flex; flex-direction:column; gap:.9rem;  flex:1; }
+    .pf h3 { font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-weight:400; line-height:1.1; }
+    .pp { display:flex; align-items:baseline; gap:.4rem; }
+    .pn { font-family:'Cormorant Garamond',serif; font-size:1.7rem; font-weight:600; }
+    .pu { font-size:.6rem; letter-spacing:.2em; text-transform:uppercase; color:var(--dim); }
+    footer {  padding:2rem 3rem; text-align:center; font-size:.55rem; letter-spacing:.2em; text-transform:uppercase; color:rgba(245,240,235,.2); }
+    .wa-float { position:fixed; bottom:1.8rem; right:1.8rem; z-index:150; display:flex; align-items:center; gap:.6rem; background:#25D366; color:#fff; text-decoration:none; padding:.65rem 1.2rem .65rem .85rem; border-radius:50px; font-family:'Montserrat',sans-serif; font-size:.62rem; font-weight:500; letter-spacing:.1em; text-transform:uppercase; box-shadow:0 4px 20px rgba(37,211,102,.35); transition:transform .25s; }
+    .wa-float:hover { transform:translateY(-3px); }
+    .wa-float svg { width:1.2rem; height:1.2rem; }
+    @media(max-width:768px) {
+      header { padding:0 1.2rem; }
+      .logo-img img { height:80px; } .logo img { height:80px; }
+      .back span { display:none; }
+      .grid { grid-template-columns:1fr; padding:2rem 1.2rem 4rem; }
+      .hero { padding:1.2rem 1.2rem 1rem; }
+    }
+    @media(max-width:480px) {
+      header { padding:0 1rem; }
+      .logo-img img { height:65px; } .logo img { height:65px; }
+      .grid { padding:1.5rem .9rem 3rem; }
+    }
+
+    /* CART BUTTON */
+    .cart-btn { position:fixed; bottom:5.2rem; right:1.8rem; z-index:150; background:var(--red); color:var(--white); border:none; padding:.6rem 1.1rem; font-family:'Montserrat',sans-serif; font-size:.6rem; font-weight:500; letter-spacing:.18em; text-transform:uppercase; cursor:pointer; display:flex; align-items:center; gap:.45rem; border-radius:50px; box-shadow:0 4px 20px rgba(139,26,26,.4); transition:background .3s, transform .25s; white-space:nowrap; }
+    .cart-btn:hover { background:var(--red2); transform:translateY(-3px); }
+    .cart-count { background:var(--white); color:var(--red); border-radius:50%; width:1.2rem; height:1.2rem; font-size:.6rem; font-weight:600; display:flex; align-items:center; justify-content:center; }
+
+    /* CART DRAWER */
+    .cart-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:300; opacity:0; pointer-events:none; transition:opacity .3s; }
+    .cart-overlay.open { opacity:1; pointer-events:all; }
+    .cart-drawer { position:fixed; top:0; right:0; width:min(420px,100vw); height:100vh; background:var(--dark); border-left:1px solid var(--border); z-index:301; transform:translateX(100%); transition:transform .35s ease; display:flex; flex-direction:column; }
+    .cart-drawer.open { transform:translateX(0); }
+    .cart-header { padding:1.8rem 2rem;  display:flex; align-items:center; justify-content:space-between; }
+    .cart-header h2 { font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:400; }
+    .cart-close { background:none; border:none; color:var(--white-dim); font-size:1.4rem; cursor:pointer; line-height:1; transition:color .2s; }
+    .cart-close:hover { color:var(--white); }
+    .cart-items { flex:1; overflow-y:auto; padding:1.5rem 2rem; display:flex; flex-direction:column; gap:1rem; }
+    .cart-empty { text-align:center; color:var(--white-dim); font-size:.78rem; padding:3rem 0; letter-spacing:.1em; }
+    .cart-item { display:flex; align-items:center; gap:1rem; padding:1rem; background:var(--charcoal); border:1px solid var(--border); }
+    .cart-item-name { flex:1; font-size:.78rem; line-height:1.4; }
+    .cart-item-price { font-family:'Cormorant Garamond',serif; font-size:1rem; color:var(--white-dim); white-space:nowrap; }
+    .cart-item-controls { display:flex; align-items:center; gap:.5rem; }
+    .qty-btn { background:var(--charcoal); border:1px solid var(--border); color:var(--white); width:1.8rem; height:1.8rem; cursor:pointer; font-size:.9rem; display:flex; align-items:center; justify-content:center; transition:background .2s; }
+    .qty-btn:hover { background:var(--red); border-color:var(--red); }
+    .qty-num { font-family:'Cormorant Garamond',serif; font-size:1.1rem; min-width:1.5rem; text-align:center; }
+    .cart-footer { padding:1.5rem 2rem;  }
+    .cart-total { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:1.2rem; }
+    .cart-total span { font-size:.65rem; letter-spacing:.25em; text-transform:uppercase; color:var(--white-dim); }
+    .cart-total strong { font-family:'Cormorant Garamond',serif; font-size:1.8rem; font-weight:600; }
+    .cart-wa-btn { width:100%; background:#25D366; color:#fff; border:none; padding:1rem; font-family:'Montserrat',sans-serif; font-size:.65rem; letter-spacing:.25em; text-transform:uppercase; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:.7rem; transition:background .3s; }
+    .cart-wa-btn:hover { background:#1ebe5d; }
+    .cart-wa-btn svg { width:1.2rem; height:1.2rem; }
+
+    /* PRODUCT CONTROLS */
+    .prod-controls { display:flex; align-items:center; gap:.8rem; margin-top:auto; padding-top:1rem; }
+    .prod-qty-wrap { display:flex; align-items:center; gap:.4rem; border:1px solid var(--border); padding:.3rem .5rem; }
+    .prod-qty-btn { background:none; border:none; color:var(--white); font-size:1rem; cursor:pointer; width:1.4rem; height:1.4rem; display:flex; align-items:center; justify-content:center; transition:color .2s; }
+    .prod-qty-btn:hover { color:var(--red-light,#a52020); }
+    .prod-qty-num { font-family:'Cormorant Garamond',serif; font-size:1rem; min-width:1.2rem; text-align:center; }
+    .prod-add-btn { flex:1; background:var(--red); color:var(--white); border:none; padding:.65rem 1rem; font-family:'Montserrat',sans-serif; font-size:.58rem; letter-spacing:.22em; text-transform:uppercase; cursor:pointer; transition:background .3s,transform .2s; }
+    .prod-add-btn:hover { background:var(--red2,#a52020); transform:translateY(-1px); }
+    .prod-add-btn.added { background:#2a7a2a; }
+
+  
+
+/* ==========================================================
+   RESPONSIVE UX PATCH — Hacienda Las Colinas
+   Ajustes para escritorio, tablet y teléfono móvil
+   ========================================================== */
+
+img, video, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+}
+
+a, button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+.btn,
+.btn-red,
+.back,
+.history-cta,
+.prod-add-btn,
+.cart-wa-btn,
+.wa-float,
+.cart-btn {
+  touch-action: manipulation;
+}
+
+/* Evita que textos largos rompan el layout */
+p, h1, h2, h3, h4, h5, h6, a, span, li, div {
+  overflow-wrap: anywhere;
+}
+
+/* Desktop amplio */
+@media (min-width: 1200px) {
+  .wrap {
+    max-width: 1200px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  :root {
+    --px: clamp(1rem, 4vw, 2.5rem);
+  }
+
+  header,
+  .nav-inner {
+    padding-left: var(--px) !important;
+    padding-right: var(--px) !important;
+  }
+
+  .grid,
+  .menu-grid,
+  .locations-grid,
+  .delivery-grid,
+  .intro-grid,
+  .story-difference-grid,
+  .story-value-flow,
+  .story-genetics-grid {
+    gap: 1.25rem;
+  }
+
+  .grid {
+    padding-left: var(--px) !important;
+    padding-right: var(--px) !important;
+  }
+
+  .hero-content {
+    padding-left: var(--px) !important;
+    padding-right: var(--px) !important;
+  }
+}
+
+/* Mobile general */
+@media (max-width: 768px) {
+  :root {
+    --px: 1rem;
+  }
+
+  nav,
+  header {
+    position: sticky !important;
+    top: 0;
+  }
+
+  .nav-inner,
+  header,
+  .header-right {
+    gap: .8rem !important;
+  }
+
+  .nav-inner {
+    flex-wrap: wrap;
+    justify-content: center !important;
+    text-align: center;
+  }
+
+  .nav-logo,
+  .logo,
+  .logo-img,
+  .header-logo {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .9rem !important;
+    padding-top: .4rem;
+  }
+
+  .nav-links a,
+  .nav a,
+  .back {
+    font-size: .56rem !important;
+    letter-spacing: .16em !important;
+  }
+
+  .logo img,
+  .logo-img img,
+  .header-logo img {
+    height: 70px !important;
+    max-width: min(62vw, 210px);
+    object-fit: contain;
+  }
+
+  .hero {
+    min-height: auto !important;
+    padding: 4.8rem 0 3rem !important;
+  }
+
+  .hero-img {
+    width: min(78vw, 360px) !important;
+    max-width: 100% !important;
+  }
+
+  .hero-content {
+    padding: 7rem var(--px) 4rem !important;
+  }
+
+  h1,
+  .hero h1 {
+    font-size: clamp(2.35rem, 12vw, 4rem) !important;
+    line-height: .96 !important;
+  }
+
+  h2,
+  .section-title,
+  .story-difference-title {
+    font-size: clamp(1.85rem, 9vw, 3rem) !important;
+    line-height: 1.08 !important;
+  }
+
+  p,
+  .lead,
+  .intro p,
+  .delivery p,
+  .story-difference-lead {
+    font-size: .82rem !important;
+    line-height: 1.75 !important;
+  }
+
+  .intro-grid,
+  .delivery-grid,
+  .locations-grid,
+  .grid,
+  .gallery,
+  .menu-grid,
+  .story-difference-grid,
+  .story-value-flow,
+  .story-process-line,
+  .story-genetics-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .section,
+  .intro,
+  .menus,
+  .locations,
+  .delivery,
+  .story-difference {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  .menu-card,
+  .pc,
+  .box-card,
+  .intro-card,
+  .hours-box,
+  .story-difference-panel,
+  .story-facts,
+  .story-value-card,
+  .story-genetic-card {
+    width: 100%;
+  }
+
+  .menu-card,
+  .pf,
+  .box-body,
+  .intro-card,
+  .hours-box,
+  .story-difference-panel,
+  .story-facts,
+  .story-value-card,
+  .story-genetic-card {
+    padding: 1.35rem !important;
+  }
+
+  .photo-card img,
+  .gallery img {
+    height: auto !important;
+    min-height: 260px;
+    max-height: 420px;
+    object-fit: cover;
+  }
+
+  .pi,
+  .box-img-wrap {
+    aspect-ratio: 4 / 3;
+  }
+
+  .pi img,
+  .box-img {
+    object-fit: contain !important;
+  }
+
+  .hours-row,
+  .story-fact-row {
+    display: block !important;
+    text-align: left;
+  }
+
+  .hours-time,
+  .story-fact-value {
+    display: block;
+    text-align: left !important;
+    margin-top: .35rem;
+  }
+
+  .prod-controls {
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: .7rem !important;
+  }
+
+  .prod-qty-wrap {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .prod-add-btn {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  .cart-drawer {
+    width: 100vw !important;
+  }
+
+  .cart-item {
+    align-items: flex-start !important;
+    flex-wrap: wrap;
+  }
+
+  .cart-item-controls {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .wa-float,
+  .cart-btn {
+    right: 1rem !important;
+  }
+
+  .wa-float {
+    bottom: 1rem !important;
+    padding: .78rem !important;
+    border-radius: 999px !important;
+  }
+
+  .wa-label,
+  .wa-float span {
+    display: none !important;
+  }
+
+  .cart-btn {
+    bottom: 4.8rem !important;
+    max-width: calc(100vw - 2rem);
+    justify-content: center;
+  }
+
+  footer {
+    padding-left: var(--px) !important;
+    padding-right: var(--px) !important;
+  }
+}
+
+/* Teléfonos pequeños */
+@media (max-width: 480px) {
+  :root {
+    --px: .9rem;
+  }
+
+  header {
+    padding-left: .9rem !important;
+    padding-right: .9rem !important;
+  }
+
+  .logo img,
+  .logo-img img,
+  .header-logo img {
+    height: 58px !important;
+    max-width: 58vw;
+  }
+
+  .header-right {
+    gap: .55rem !important;
+  }
+
+  .back span {
+    display: none !important;
+  }
+
+  .hero {
+    padding-top: 4rem !important;
+  }
+
+  .hero h1,
+  h1 {
+    font-size: clamp(2rem, 13vw, 3.2rem) !important;
+  }
+
+  .eyebrow,
+  .section-label,
+  .intro-label,
+  .label,
+  .box-eyebrow,
+  .includes-label {
+    letter-spacing: .24em !important;
+    font-size: .52rem !important;
+  }
+
+  .eyebrow::before,
+  .eyebrow::after,
+  .btn::before,
+  .btn::after,
+  .history-cta span::before,
+  .history-cta span::after {
+    width: 28px !important;
+  }
+
+  .grid {
+    padding-top: 1.5rem !important;
+    padding-bottom: 4rem !important;
+  }
+
+  .pf h3,
+  .box-name {
+    font-size: 1.35rem !important;
+  }
+
+  .pn,
+  .box-price {
+    font-size: 1.55rem !important;
+  }
+
+  .btn,
+  .btn-red,
+  .history-cta {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: .95rem 1rem !important;
+    letter-spacing: .18em !important;
+  }
+
+  .intro-stats {
+    grid-template-columns: 1fr !important;
+  }
+
+  .cart-header,
+  .cart-items,
+  .cart-footer {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .cart-btn {
+    font-size: .54rem !important;
+    letter-spacing: .12em !important;
+    padding: .65rem .85rem !important;
+  }
+}
+
+/* Landscape móvil */
+@media (max-width: 900px) and (orientation: landscape) {
+  .hero {
+    min-height: auto !important;
+  }
+
+  .hero-content {
+    padding-top: 5rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  .photo-card img,
+  .gallery img {
+    max-height: 320px;
+  }
+}
+
+
+/* ==========================================================
+   UX SR FINAL PATCH — centrado, simetría y responsive 100%
+   Generado para Hacienda Las Colinas
+   ========================================================== */
+:root { --safe-px: clamp(.9rem, 4vw, 2.75rem); }
+html, body { width:100%; max-width:100%; overflow-x:hidden !important; }
+body { text-rendering: optimizeLegibility; }
+img, picture, video, canvas, svg { max-width:100%; height:auto; }
+section, header, nav, main, footer { max-width:100%; }
+.wrap,
+.container,
+.hero-contenido,
+.hero-content,
+.section-head,
+.intro,
+.menus,
+.locations,
+.delivery,
+.story-difference,
+.story-genetics,
+.story-process,
+.story-value,
+.story-origin,
+.grid,
+.menu-grid,
+.locations-grid,
+.delivery-grid,
+.intro-grid,
+.gallery,
+.story-difference-grid,
+.story-process-line,
+.story-genetics-grid,
+.story-value-flow {
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+/* Alineación visual consistente */
+.hero,
+.hero-contenido,
+.hero-content,
+.section-head,
+.intro,
+.menus,
+.locations,
+.delivery,
+.story-difference,
+.story-genetics,
+.story-process,
+.story-value,
+.story-origin,
+footer { text-align:center !important; }
+
+.hero h1,
+.hero p,
+.hero-sub,
+.lead,
+.section-title,
+.section-subtitle,
+.story-difference-lead,
+.intro p,
+.delivery p { margin-left:auto !important; margin-right:auto !important; }
+
+.hero-eyebrow,
+.eyebrow,
+.section-label,
+.intro-label,
+.label,
+.box-eyebrow,
+.includes-label { justify-content:center !important; text-align:center !important; }
+.hero-eyebrow::before { content:''; width:2.4rem; height:1px; background:var(--red-vivo, var(--red)); margin-right:1.1rem; }
+.hero-eyebrow::after { margin-left:1.1rem !important; }
+
+.hero-acciones,
+.cta-row,
+.menu-actions,
+.actions,
+.buttons,
+.nav-der { justify-content:center !important; }
+
+/* Grids simétricos */
+.grid,
+.menu-grid,
+.locations-grid,
+.delivery-grid,
+.intro-grid,
+.gallery,
+.story-difference-grid,
+.story-process-line,
+.story-genetics-grid,
+.story-value-flow {
+  display:grid !important;
+  justify-content:center !important;
+  justify-items:center !important;
+  align-items:stretch !important;
+}
+.grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)) !important; }
+.menu-grid,
+.locations-grid,
+.delivery-grid,
+.intro-grid,
+.story-difference-grid,
+.story-genetics-grid,
+.story-value-flow { grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)) !important; }
+.gallery { grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)) !important; }
+
+.pc,
+.box-card,
+.menu-card,
+.intro-card,
+.hours-box,
+.location-card,
+.delivery-card,
+.story-difference-panel,
+.story-facts,
+.story-value-card,
+.story-genetic-card,
+.story-process-card {
+  width:100% !important;
+  max-width:420px;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  text-align:center !important;
+}
+
+.pf,
+.box-body,
+.menu-card,
+.intro-card,
+.hours-box,
+.location-card,
+.delivery-card,
+.story-difference-panel,
+.story-facts,
+.story-value-card,
+.story-genetic-card,
+.story-process-card {
+  align-items:center !important;
+}
+
+.pi,
+.box-img-wrap,
+.menu-img,
+.photo-card,
+.gallery figure { width:100% !important; }
+.pi img,
+.box-img,
+.menu-card img,
+.photo-card img,
+.gallery img,
+.hero-img,
+.hero-foto img {
+  max-width:100% !important;
+}
+.pi img,
+.box-img { object-fit:contain !important; object-position:center center !important; }
+
+/* Botones y controles centrados */
+.btn,
+.btn-red,
+.cta,
+.history-cta,
+.prod-add-btn,
+.cart-wa-btn,
+.nav-pedido,
+.back,
+.wa-float,
+.cart-btn {
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  text-align:center !important;
+}
+.prod-controls,
+.prod-qty-wrap,
+.box-price-wrap,
+.pp,
+.cart-total,
+.cart-item-controls { justify-content:center !important; }
+.prod-controls { width:100%; }
+
+/* Header de páginas menú: logo centrado y regreso alineado */
+body > header {
+  display:grid !important;
+  grid-template-columns: 1fr auto 1fr;
+  align-items:center !important;
+  justify-items:center !important;
+  padding-left:var(--safe-px) !important;
+  padding-right:var(--safe-px) !important;
+}
+body > header .logo,
+body > header .logo-img { grid-column:2; justify-self:center !important; }
+body > header .header-right { grid-column:3; justify-self:end !important; display:flex; align-items:center; justify-content:flex-end !important; }
+.logo img,
+.logo-img img { object-fit:contain !important; }
+
+/* Navegación home */
+.nav-inner { justify-content:center !important; text-align:center; }
+.nav-logo { justify-self:center; }
+.nav-links { justify-content:center !important; align-items:center; }
+.nav-links a { text-align:center; }
+
+@media (min-width: 1025px) {
+  .nav-inner { display:grid !important; grid-template-columns:1fr auto 1fr; }
+  .nav-logo { grid-column:1; justify-self:start; }
+  .nav-links { grid-column:2; }
+  .nav-der { grid-column:3; justify-self:end; }
+  .hero-contenido .wrap, .hero-content .wrap { display:flex; flex-direction:column; align-items:center; }
+}
+
+@media (max-width: 1024px) {
+  .wrap { padding-left:var(--safe-px) !important; padding-right:var(--safe-px) !important; }
+  .grid,
+  .menu-grid,
+  .locations-grid,
+  .delivery-grid,
+  .intro-grid,
+  .gallery,
+  .story-difference-grid,
+  .story-process-line,
+  .story-genetics-grid,
+  .story-value-flow {
+    gap:1.25rem !important;
+    padding-left:var(--safe-px) !important;
+    padding-right:var(--safe-px) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  body > header {
+    grid-template-columns: 1fr auto 1fr;
+    min-height:72px;
+    gap:.5rem !important;
+  }
+  .logo img,
+  .logo-img img,
+  .nav-logo img,
+  .header-logo img { height:clamp(54px, 14vw, 72px) !important; max-width:min(58vw, 220px) !important; }
+  body > header .header-right { max-width:100%; }
+
+  .nav-inner { flex-wrap:wrap !important; gap:.75rem !important; padding-left:var(--safe-px) !important; padding-right:var(--safe-px) !important; }
+  .nav-logo { width:100%; display:flex !important; justify-content:center !important; }
+  .nav-links { width:100%; flex-wrap:wrap !important; gap:.85rem !important; order:3; }
+  .nav-der { width:100%; flex-wrap:wrap; order:2; }
+  .nav-pedido { max-width:100%; }
+
+  .hero { min-height:auto !important; padding-left:0 !important; padding-right:0 !important; }
+  .hero-foto { position:relative !important; width:100% !important; min-height:260px; opacity:.72; }
+  .hero-foto::after { background:linear-gradient(to top, var(--black) 0%, rgba(10,10,10,.35) 55%, transparent 100%) !important; }
+  .hero-contenido,
+  .hero-content { padding:2.5rem var(--safe-px) 3rem !important; }
+  .hero h1 { max-width:12ch !important; }
+  .hero-sub, .hero p, .lead { max-width:56ch !important; }
+
+  .grid,
+  .menu-grid,
+  .locations-grid,
+  .delivery-grid,
+  .intro-grid,
+  .gallery,
+  .story-difference-grid,
+  .story-process-line,
+  .story-genetics-grid,
+  .story-value-flow { grid-template-columns:1fr !important; }
+
+  .pc,
+  .box-card,
+  .menu-card,
+  .intro-card,
+  .hours-box,
+  .location-card,
+  .delivery-card,
+  .story-difference-panel,
+  .story-facts,
+  .story-value-card,
+  .story-genetic-card,
+  .story-process-card { max-width:560px; }
+
+  .prod-controls { flex-direction:column !important; align-items:stretch !important; }
+  .prod-qty-wrap { width:100%; min-height:44px; }
+  .prod-add-btn { width:100%; min-height:44px; }
+  .cart-item { justify-content:center; text-align:center; }
+  .cart-total { text-align:center; flex-direction:column; align-items:center !important; gap:.35rem; }
+}
+
+@media (max-width: 480px) {
+  :root { --safe-px:.9rem; }
+  body > header { padding-left:.75rem !important; padding-right:.75rem !important; }
+  .hero h1 { font-size:clamp(2rem, 12vw, 3.2rem) !important; }
+  .hero-acciones,
+  .cta-row,
+  .menu-actions,
+  .actions,
+  .buttons { width:100%; }
+  .cta,
+  .btn,
+  .btn-red,
+  .history-cta,
+  .nav-pedido { width:100%; max-width:340px; }
+  .grid { padding-top:1.5rem !important; }
+  .pf,
+  .box-body,
+  .menu-card,
+  .intro-card,
+  .hours-box,
+  .location-card,
+  .delivery-card,
+  .story-difference-panel,
+  .story-facts,
+  .story-value-card,
+  .story-genetic-card,
+  .story-process-card { padding-left:1.1rem !important; padding-right:1.1rem !important; }
+}
+
+
+
+/* ==========================================================
+   UX FINAL — Header igual al index + volver al inicio
+   ========================================================== */
+:root { --header-logo-h: clamp(56px, 7vw, 78px); }
+body > header {
+  min-height: 92px !important;
+  padding: .55rem clamp(1rem, 4vw, 2.5rem) !important;
+  display: grid !important;
+  grid-template-columns: 1fr auto 1fr !important;
+  align-items: center !important;
+  justify-items: center !important;
+  gap: .85rem !important;
+}
+body > header .logo,
+body > header .logo-img {
+  grid-column: 2 !important;
+  justify-self: center !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 0 !important;
+}
+body > header .logo img,
+body > header .logo-img img,
+body > header a.logo img,
+body > header a.logo-img img {
+  height: var(--header-logo-h) !important;
+  width: auto !important;
+  max-width: min(58vw, 220px) !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+body > header .header-right {
+  grid-column: 3 !important;
+  justify-self: end !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  min-width: 0 !important;
+}
+body > header > .back {
+  grid-column: 3 !important;
+  justify-self: end !important;
+}
+.back {
+  min-height: 46px !important;
+  padding: 0 .95rem !important;
+  border: 1px solid rgba(200,168,120,.45) !important;
+  border-radius: 999px !important;
+  font-size: .62rem !important;
+  letter-spacing: .18em !important;
+  font-weight: 500 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: .45rem !important;
+  text-align: center !important;
+}
+.back svg {
+  width: 15px !important;
+  height: 15px !important;
+  flex: 0 0 auto !important;
+}
+.back span { display: inline !important; }
+.to-top-btn {
+  position: fixed;
+  left: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 170;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .45rem;
+  min-height: 46px;
+  padding: 0 1rem;
+  border: 1px solid rgba(200,168,120,.5);
+  border-radius: 999px;
+  background: rgba(10,10,10,.86);
+  color: var(--white, #f5f0eb);
+  font-family: 'Montserrat', sans-serif;
+  font-size: .6rem;
+  font-weight: 500;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(0,0,0,.35);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity .25s ease, transform .25s ease, border-color .25s ease;
+}
+.to-top-btn.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.to-top-btn:hover { border-color: var(--red2, #a52020); }
+@media (max-width: 768px) {
+  :root { --header-logo-h: clamp(54px, 13vw, 72px); }
+  body > header {
+    min-height: 82px !important;
+    grid-template-columns: 1fr auto 1fr !important;
+    padding: .55rem .9rem !important;
+    gap: .45rem !important;
+  }
+  .back {
+    min-height: 42px !important;
+    width: 42px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    letter-spacing: 0 !important;
+  }
+  .back span { display: none !important; }
+  .back svg { width: 16px !important; height: 16px !important; }
+  .to-top-btn {
+    left: 1rem;
+    bottom: 1rem;
+    width: 46px;
+    min-width: 46px;
+    padding: 0;
+    border-radius: 50%;
+    font-size: .8rem;
+    letter-spacing: 0;
+  }
+  .to-top-btn span { display: none; }
+}
+@media (max-width: 480px) {
+  :root { --header-logo-h: clamp(50px, 12.6vw, 60px); }
+  body > header { min-height: 74px !important; }
+  body > header .logo img,
+  body > header .logo-img img,
+  body > header a.logo img,
+  body > header a.logo-img img { max-width: 56vw !important; }
+}
+
+
+/* ==========================================================
+   CORRECCIÓN FINAL — Logo superior igual al index
+   Mismo comportamiento que .nav-logo img del index.html
+   ========================================================== */
+:root {
+  --header-logo-h: clamp(56px, 7vw, 78px);
+}
+body > header .logo img,
+body > header .logo-img img,
+body > header a.logo img,
+body > header a.logo-img img {
+  height: var(--header-logo-h) !important;
+  width: auto !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+@media (max-width: 768px) {
+  :root { --header-logo-h: clamp(54px, 13vw, 72px); }
+  body > header .logo img,
+  body > header .logo-img img,
+  body > header a.logo img,
+  body > header a.logo-img img {
+    height: var(--header-logo-h) !important;
+    max-width: min(58vw, 220px) !important;
+  }
+}
+@media (max-width: 480px) {
+  :root { --header-logo-h: clamp(50px, 12.6vw, 60px); }
+  body > header .logo img,
+  body > header .logo-img img,
+  body > header a.logo img,
+  body > header a.logo-img img {
+    height: var(--header-logo-h) !important;
+    max-width: 56vw !important;
+  }
+}
+
+
+
+/* ==========================================================
+   AJUSTE FINAL LOGO MOBILE — igual al index.html
+   Este bloque debe quedar al final del CSS para sobreescribir reglas anteriores.
+   ========================================================== */
+:root {
+  --header-logo-h: clamp(56px, 7vw, 78px);
+}
+body > header .logo img,
+body > header .logo-img img,
+body > header a.logo img,
+body > header a.logo-img img {
+  height: var(--header-logo-h) !important;
+  width: auto !important;
+  max-width: min(58vw, 220px) !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+@media (max-width: 768px) {
+  :root { --header-logo-h: clamp(54px, 13vw, 72px); }
+  body > header .logo img,
+  body > header .logo-img img,
+  body > header a.logo img,
+  body > header a.logo-img img {
+    height: clamp(54px, 13vw, 72px) !important;
+    max-width: min(58vw, 220px) !important;
+  }
+}
+@media (max-width: 480px) {
+  :root { --header-logo-h: clamp(50px, 12.6vw, 60px); }
+  body > header .logo img,
+  body > header .logo-img img,
+  body > header a.logo img,
+  body > header a.logo-img img {
+    height: clamp(50px, 12.6vw, 60px) !important;
+    max-width: 56vw !important;
+  }
+}
+
+
+/* ==========================================================
+   FIX FINAL — Logo header igual al index en escritorio y mobile
+   Usa el mismo tamaño visual que .nav-logo img del index.html
+   ========================================================== */
+:root{
+  --lc-index-logo-h: clamp(56px, 7vw, 78px);
+}
+body > header .logo,
+body > header .logo-img{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:auto !important;
+  min-width:0 !important;
+}
+body > header .logo img,
+body > header .logo-img img,
+body > header a.logo img,
+body > header a.logo-img img{
+  height:var(--lc-index-logo-h) !important;
+  width:auto !important;
+  max-width:min(62vw, 260px) !important;
+  object-fit:contain !important;
+  display:block !important;
+}
+@media (max-width:768px){
+  :root{ --lc-index-logo-h: clamp(56px, 7vw, 78px); }
+  body > header .logo img,
+  body > header .logo-img img,
+  body > header a.logo img,
+  body > header a.logo-img img{
+    height:var(--lc-index-logo-h) !important;
+    max-width:min(64vw, 260px) !important;
+  }
+}
+@media (max-width:480px){
+  :root{ --lc-index-logo-h: clamp(56px, 7vw, 78px); }
+  body > header .logo img,
+  body > header .logo-img img,
+  body > header a.logo img,
+  body > header a.logo-img img{
+    height:var(--lc-index-logo-h) !important;
+    max-width:min(66vw, 260px) !important;
+  }
+}
+
+</style>
+</head>
+<body>
+<header>
+<a aria-label="Volver a la sección Menú" class="logo logo-img" href="index.html#menu"><img alt="Hacienda Las Colinas" src="images/menu-productos/01-hacienda-las-colinas-b2faadba62e8.png" style="height:150px;width:auto;display:block;mix-blend-mode:screen;filter:brightness(1.15) contrast(1.05);opacity:0.98;"/></a>
+<a class="back" href="index.html#menu">
+<svg viewbox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"></path></svg>
+<span>Volver al menú</span>
+</a>
+</header>
+<button aria-label="Volver al principio de la página" class="to-top-btn" onclick="window.scrollTo({top:0, behavior:'smooth'})" type="button">↑ <span>Inicio</span></button>
+<!-- CART OVERLAY & DRAWER -->
+<div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cart-drawer">
+<div class="cart-header">
+<h2>Mi Carrito</h2>
+<button class="cart-close" onclick="closeCart()">✕</button>
+</div>
+<div class="cart-items" id="cart-items">
+<p class="cart-empty">Tu carrito está vacío</p>
+</div>
+<div class="cart-footer">
+<div class="cart-total">
+<span>Total</span>
+<strong id="cart-total-num">L 0.00</strong>
+</div>
+<button class="cart-wa-btn" onclick="sendToWhatsApp()">
+<svg fill="none" viewbox="0 0 32 32"><path d="M16 4.5C9.65 4.5 4.5 9.65 4.5 16c0 2.18.6 4.23 1.64 5.99L4.5 27.5l5.7-1.62A11.46 11.46 0 0 0 16 27.5c6.35 0 11.5-5.15 11.5-11.5S22.35 4.5 16 4.5Zm5.72 16.4c-.24.67-1.38 1.28-1.88 1.34-.47.06-1.07.08-1.72-.11-.4-.12-.9-.28-1.55-.55-2.72-1.18-4.5-3.9-4.63-4.08-.13-.18-1.07-1.42-1.07-2.71 0-1.29.68-1.92.92-2.18.24-.26.52-.33.7-.33.17 0 .35 0 .5.01.16.01.38-.06.59.45.22.52.74 1.81.8 1.94.07.13.11.28.02.45-.08.17-.13.28-.26.43-.13.15-.27.34-.39.45-.13.12-.26.25-.11.49.15.24.66 1.09 1.42 1.76.98.87 1.8 1.14 2.05 1.27.25.13.39.11.53-.06.15-.17.62-.72.79-.97.17-.25.33-.21.56-.12.22.08 1.41.67 1.65.79.24.12.4.18.46.28.06.1.06.57-.18 1.24Z" fill="#fff"></path></svg>
+        Realizar pedido por WhatsApp
+      </button>
+</div>
+</div>
+<!-- CART BUTTON -->
+<button class="cart-btn" onclick="openCart()">
+    🛒 Carrito <span class="cart-count" id="cart-count">0</span>
+</button>
+<section class="hero">
+<p class="eyebrow">Hacienda Las Colinas</p>
+<h1>Menú <em>Carne de Cerdo</em></h1>
+<p>Cortes de cerdo importados y nacionales — agrega al carrito y realiza tu pedido</p>
+</section>
+<div class="grid"><div class="pc">
+<div class="pi">
+<img alt="Cerdo canal entero" decoding="async" loading="lazy" src="images/menu-productos/02-cerdo-canal-entero-a6b015a49609.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Cerdo canal entero</h3>
+<div class="pp">
+<span class="pn">L 47.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p0',-1)">−</button>
+<span class="prod-qty-num" id="qty-p0">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p0',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p0','Cerdo canal entero','47.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Pierna de cerdo entera" decoding="async" loading="lazy" src="images/menu-productos/03-pierna-de-cerdo-entera-6f6aad770165.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Pierna de cerdo entera</h3>
+<div class="pp">
+<span class="pn">L 70.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p1',-1)">−</button>
+<span class="prod-qty-num" id="qty-p1">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p1',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p1','Pierna de cerdo entera','70.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Tajo de paleta de cerdo" decoding="async" loading="lazy" src="images/menu-productos/04-tajo-de-paleta-de-cerdo-80ddb3623e64.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Tajo de paleta de cerdo</h3>
+<div class="pp">
+<span class="pn">L 70.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p2',-1)">−</button>
+<span class="prod-qty-num" id="qty-p2">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p2',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p2','Tajo de paleta de cerdo','70.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Costilla de cerdo" decoding="async" loading="lazy" src="images/menu-productos/05-costilla-de-cerdo-64065441bc73.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Costilla de cerdo</h3>
+<div class="pp">
+<span class="pn">L 75.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p3',-1)">−</button>
+<span class="prod-qty-num" id="qty-p3">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p3',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p3','Costilla de cerdo','75.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Chuleta en barra entera" decoding="async" loading="lazy" src="images/menu-productos/06-chuleta-en-barra-entera-6e5ead2c9d5d.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Chuleta en barra entera</h3>
+<div class="pp">
+<span class="pn">L 65.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p4',-1)">−</button>
+<span class="prod-qty-num" id="qty-p4">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p4',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p4','Chuleta en barra entera','65.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Lonja entera de cerdo" decoding="async" loading="lazy" src="images/menu-productos/07-lonja-entera-de-cerdo-accf5db66b06.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Lonja entera de cerdo</h3>
+<div class="pp">
+<span class="pn">L 45.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p5',-1)">−</button>
+<span class="prod-qty-num" id="qty-p5">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p5',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p5','Lonja entera de cerdo','45.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Tajo de pierna" decoding="async" loading="lazy" src="images/menu-productos/08-tajo-de-pierna-ee1a460794d1.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Tajo de pierna</h3>
+<div class="pp">
+<span class="pn">L 75.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p6',-1)">−</button>
+<span class="prod-qty-num" id="qty-p6">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p6',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p6','Tajo de pierna','75.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Tajo de paleta" decoding="async" loading="lazy" src="images/menu-productos/09-tajo-de-paleta-77433367dd4b.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Tajo de paleta</h3>
+<div class="pp">
+<span class="pn">L 75.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p7',-1)">−</button>
+<span class="prod-qty-num" id="qty-p7">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p7',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p7','Tajo de paleta','75.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Tajo boston cerdo" decoding="async" loading="lazy" src="images/menu-productos/10-tajo-boston-cerdo-b9accb7f2ff2.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Tajo boston cerdo</h3>
+<div class="pp">
+<span class="pn">L 75.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p8',-1)">−</button>
+<span class="prod-qty-num" id="qty-p8">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p8',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p8','Tajo boston cerdo','75.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Lomo entero de cerdo" decoding="async" loading="lazy" src="images/menu-productos/11-lomo-entero-de-cerdo-7c00526c6e0e.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Lomo entero de cerdo</h3>
+<div class="pp">
+<span class="pn">L 85.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p9',-1)">−</button>
+<span class="prod-qty-num" id="qty-p9">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p9',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p9','Lomo entero de cerdo','85.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Falda de cerdo" decoding="async" loading="lazy" src="images/menu-productos/12-falda-de-cerdo-ab526d2a49e5.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Falda de cerdo</h3>
+<div class="pp">
+<span class="pn">L 70.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p10',-1)">−</button>
+<span class="prod-qty-num" id="qty-p10">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p10',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p10','Falda de cerdo','70.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Tajo de paleta con cocote" decoding="async" loading="lazy" src="images/menu-productos/13-tajo-de-paleta-con-cocote-f57dce809e4d.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Tajo de paleta con cocote</h3>
+<div class="pp">
+<span class="pn">L 75.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p11',-1)">−</button>
+<span class="prod-qty-num" id="qty-p11">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p11',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p11','Tajo de paleta con cocote','75.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Bondiola de cerdo" decoding="async" loading="lazy" src="images/menu-productos/14-bondiola-de-cerdo-f9ca568ad5c7.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Bondiola de cerdo</h3>
+<div class="pp">
+<span class="pn">L 75.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p12',-1)">−</button>
+<span class="prod-qty-num" id="qty-p12">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p12',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p12','Bondiola de cerdo','75.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Asar de cerdo" decoding="async" loading="lazy" src="images/menu-productos/15-asar-de-cerdo-4b791b506294.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Asar de cerdo</h3>
+<div class="pp">
+<span class="pn">L 75.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p13',-1)">−</button>
+<span class="prod-qty-num" id="qty-p13">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p13',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p13','Asar de cerdo','75.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Asar de cerdo barbacoa" decoding="async" loading="lazy" src="images/menu-productos/16-asar-de-cerdo-barbacoa-8904ba133bea.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Asar de cerdo barbacoa</h3>
+<div class="pp">
+<span class="pn">L 80.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p14',-1)">−</button>
+<span class="prod-qty-num" id="qty-p14">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p14',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p14','Asar de cerdo barbacoa','80.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Asar de cerdo criollo" decoding="async" loading="lazy" src="images/menu-productos/17-asar-de-cerdo-criollo-3d518e7c635a.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Asar de cerdo criollo</h3>
+<div class="pp">
+<span class="pn">L 80.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p15',-1)">−</button>
+<span class="prod-qty-num" id="qty-p15">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p15',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p15','Asar de cerdo criollo','80.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Asar de cerdo pastor" decoding="async" loading="lazy" src="images/menu-productos/18-asar-de-cerdo-pastor-e5a20ca9835c.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Asar de cerdo pastor</h3>
+<div class="pp">
+<span class="pn">L 80.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p16',-1)">−</button>
+<span class="prod-qty-num" id="qty-p16">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p16',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p16','Asar de cerdo pastor','80.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Estofado de cerdo" decoding="async" loading="lazy" src="images/menu-productos/19-estofado-de-cerdo-5fd90305876d.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Estofado de cerdo</h3>
+<div class="pp">
+<span class="pn">L 75.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p17',-1)">−</button>
+<span class="prod-qty-num" id="qty-p17">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p17',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p17','Estofado de cerdo','75.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Trocitos de cerdo para pinchos" decoding="async" loading="lazy" src="images/menu-productos/20-trocitos-de-cerdo-para-pinchos-8387f270238d.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Trocitos de cerdo para pinchos</h3>
+<div class="pp">
+<span class="pn">L 75.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p18',-1)">−</button>
+<span class="prod-qty-num" id="qty-p18">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p18',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p18','Trocitos de cerdo para pinchos','75.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Fajitas de cerdo" decoding="async" loading="lazy" src="images/menu-productos/21-fajitas-de-cerdo-e4685f6f8c7c.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Fajitas de cerdo</h3>
+<div class="pp">
+<span class="pn">L 75.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p19',-1)">−</button>
+<span class="prod-qty-num" id="qty-p19">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p19',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p19','Fajitas de cerdo','75.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Medallón de lomo" decoding="async" loading="lazy" src="images/menu-productos/22-medalln-de-lomo-4b3ef816b8d9.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Medallón de lomo</h3>
+<div class="pp">
+<span class="pn">L 80.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p20',-1)">−</button>
+<span class="prod-qty-num" id="qty-p20">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p20',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p20','Medallón de lomo','80.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Bistec de cerdo" decoding="async" loading="lazy" src="images/menu-productos/23-bistec-de-cerdo-a3717d2d43a3.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Bistec de cerdo</h3>
+<div class="pp">
+<span class="pn">L 75.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p21',-1)">−</button>
+<span class="prod-qty-num" id="qty-p21">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p21',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p21','Bistec de cerdo','75.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Carne de cerdo al pastor" decoding="async" loading="lazy" src="images/menu-productos/24-carne-de-cerdo-al-pastor-a87505cc777f.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Carne de cerdo al pastor</h3>
+<div class="pp">
+<span class="pn">L 75.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p22',-1)">−</button>
+<span class="prod-qty-num" id="qty-p22">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p22',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p22','Carne de cerdo al pastor','75.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Chuleta de lomo de cerdo" decoding="async" loading="lazy" src="images/menu-productos/25-chuleta-de-lomo-de-cerdo-f1fd6195d3ad.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Chuleta de lomo de cerdo</h3>
+<div class="pp">
+<span class="pn">L 65.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p23',-1)">−</button>
+<span class="prod-qty-num" id="qty-p23">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p23',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p23','Chuleta de lomo de cerdo','65.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Chuleta de costilla" decoding="async" loading="lazy" src="images/menu-productos/26-chuleta-de-costilla-4c7aed151c65.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Chuleta de costilla</h3>
+<div class="pp">
+<span class="pn">L 65.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p24',-1)">−</button>
+<span class="prod-qty-num" id="qty-p24">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p24',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p24','Chuleta de costilla','65.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Chuleta de pierna" decoding="async" loading="lazy" src="images/menu-productos/27-chuleta-de-pierna-04437b33e9b8.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Chuleta de pierna</h3>
+<div class="pp">
+<span class="pn">L 65.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p25',-1)">−</button>
+<span class="prod-qty-num" id="qty-p25">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p25',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p25','Chuleta de pierna','65.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Chuleta boston" decoding="async" loading="lazy" src="images/menu-productos/28-chuleta-boston-ac177bd77611.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Chuleta boston</h3>
+<div class="pp">
+<span class="pn">L 68.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p26',-1)">−</button>
+<span class="prod-qty-num" id="qty-p26">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p26',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p26','Chuleta boston','68.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Asado de tira" decoding="async" loading="lazy" src="images/menu-productos/29-asado-de-tira-1ae9ce449f2f.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Asado de tira</h3>
+<div class="pp">
+<span class="pn">L 80.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p27',-1)">−</button>
+<span class="prod-qty-num" id="qty-p27">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p27',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p27','Asado de tira','80.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Costilla coreana" decoding="async" loading="lazy" src="images/menu-productos/30-costilla-coreana-a66b772ff0f3.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Costilla coreana</h3>
+<div class="pp">
+<span class="pn">L 90.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p28',-1)">−</button>
+<span class="prod-qty-num" id="qty-p28">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p28',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p28','Costilla coreana','90.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Baby back ribs" decoding="async" loading="lazy" src="images/menu-productos/31-baby-back-ribs-52266a842fac.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Baby back ribs</h3>
+<div class="pp">
+<span class="pn">L 95.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p29',-1)">−</button>
+<span class="prod-qty-num" id="qty-p29">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p29',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p29','Baby back ribs','95.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Costilla St. Louis" decoding="async" loading="lazy" src="images/menu-productos/32-costilla-st-louis-4a8777d49c67.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Costilla St. Louis</h3>
+<div class="pp">
+<span class="pn">L 90.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p30',-1)">−</button>
+<span class="prod-qty-num" id="qty-p30">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p30',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p30','Costilla St. Louis','90.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Costilla en cubo larga" decoding="async" loading="lazy" src="images/menu-productos/33-costilla-en-cubo-larga-d6a93bcdf06c.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Costilla en cubo larga</h3>
+<div class="pp">
+<span class="pn">L 95.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p31',-1)">−</button>
+<span class="prod-qty-num" id="qty-p31">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p31',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p31','Costilla en cubo larga','95.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Costilla con cuero en tira" decoding="async" loading="lazy" src="images/menu-productos/34-costilla-con-cuero-en-tira-84af46cab813.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Costilla con cuero en tira</h3>
+<div class="pp">
+<span class="pn">L 78.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p32',-1)">−</button>
+<span class="prod-qty-num" id="qty-p32">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p32',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p32','Costilla con cuero en tira','78.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Entraña de cerdo" decoding="async" loading="lazy" src="images/menu-productos/35-entraa-de-cerdo-2a5525d00461.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Entraña de cerdo</h3>
+<div class="pp">
+<span class="pn">L 90.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p33',-1)">−</button>
+<span class="prod-qty-num" id="qty-p33">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p33',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p33','Entraña de cerdo','90.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Filete de cerdo" decoding="async" loading="lazy" src="images/menu-productos/36-filete-de-cerdo-6bd5f349de31.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Filete de cerdo</h3>
+<div class="pp">
+<span class="pn">L 95.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p34',-1)">−</button>
+<span class="prod-qty-num" id="qty-p34">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p34',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p34','Filete de cerdo','95.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Tomahawk de cerdo" decoding="async" loading="lazy" src="images/menu-productos/37-tomahawk-de-cerdo-67f358817ff4.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Tomahawk de cerdo</h3>
+<div class="pp">
+<span class="pn">L 200.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p35',-1)">−</button>
+<span class="prod-qty-num" id="qty-p35">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p35',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p35','Tomahawk de cerdo','200.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Panceta de cerdo" decoding="async" loading="lazy" src="images/menu-productos/38-panceta-de-cerdo-fe79b19f7475.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Panceta de cerdo</h3>
+<div class="pp">
+<span class="pn">L 97.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p36',-1)">−</button>
+<span class="prod-qty-num" id="qty-p36">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p36',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p36','Panceta de cerdo','97.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Carne molida de cerdo" decoding="async" loading="lazy" src="images/menu-productos/39-carne-molida-de-cerdo-59c47116af11.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Carne molida de cerdo</h3>
+<div class="pp">
+<span class="pn">L 75.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p37',-1)">−</button>
+<span class="prod-qty-num" id="qty-p37">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p37',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p37','Carne molida de cerdo','75.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Recorte molido choricero" decoding="async" loading="lazy" src="images/menu-productos/40-recorte-molido-choricero-60b4c6ed6ea3.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Recorte molido choricero</h3>
+<div class="pp">
+<span class="pn">L 55.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p38',-1)">−</button>
+<span class="prod-qty-num" id="qty-p38">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p38',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p38','Recorte molido choricero','55.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Cachete de cerdo" decoding="async" loading="lazy" src="images/menu-productos/41-cachete-de-cerdo-888ce5e56451.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Cachete de cerdo</h3>
+<div class="pp">
+<span class="pn">L 68.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p39',-1)">−</button>
+<span class="prod-qty-num" id="qty-p39">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p39',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p39','Cachete de cerdo','68.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Costilla ahumada" decoding="async" loading="lazy" src="images/menu-productos/42-costilla-ahumada-6416cad10119.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Costilla ahumada</h3>
+<div class="pp">
+<span class="pn">L 125.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p40',-1)">−</button>
+<span class="prod-qty-num" id="qty-p40">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p40',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p40','Costilla ahumada','125.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Chuleta ahumada" decoding="async" loading="lazy" src="images/menu-productos/43-chuleta-ahumada-514145e0762d.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Chuleta ahumada</h3>
+<div class="pp">
+<span class="pn">L 125.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p41',-1)">−</button>
+<span class="prod-qty-num" id="qty-p41">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p41',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p41','Chuleta ahumada','125.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Bacon" decoding="async" loading="lazy" src="images/menu-productos/44-bacon-fcfcb014e826.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Bacon</h3>
+<div class="pp">
+<span class="pn">L 145.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p42',-1)">−</button>
+<span class="prod-qty-num" id="qty-p42">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p42',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p42','Bacon','145.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Chorizo barbacoa" decoding="async" loading="lazy" src="images/menu-productos/45-chorizo-barbacoa-eec9c5e8d645.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Chorizo barbacoa</h3>
+<div class="pp">
+<span class="pn">L 70.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p43',-1)">−</button>
+<span class="prod-qty-num" id="qty-p43">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p43',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p43','Chorizo barbacoa','70.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Chorizo polaco" decoding="async" loading="lazy" src="images/menu-productos/46-chorizo-polaco-53f0ac17fedc.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Chorizo polaco</h3>
+<div class="pp">
+<span class="pn">L 80.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p44',-1)">−</button>
+<span class="prod-qty-num" id="qty-p44">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p44',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p44','Chorizo polaco','80.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Chorizo uruguayo" decoding="async" loading="lazy" src="images/menu-productos/47-chorizo-uruguayo-38d254b93c87.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Chorizo uruguayo</h3>
+<div class="pp">
+<span class="pn">L 85.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p45',-1)">−</button>
+<span class="prod-qty-num" id="qty-p45">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p45',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p45','Chorizo uruguayo','85.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Chorizo español" decoding="async" loading="lazy" src="images/menu-productos/48-chorizo-espaol-5d4dbd57024e.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Chorizo español</h3>
+<div class="pp">
+<span class="pn">L 85.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p46',-1)">−</button>
+<span class="prod-qty-num" id="qty-p46">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p46',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p46','Chorizo español','85.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Chorizo indio" decoding="async" loading="lazy" src="images/menu-productos/49-chorizo-indio-030e9d58c6f9.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Chorizo indio</h3>
+<div class="pp">
+<span class="pn">L 75.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p47',-1)">−</button>
+<span class="prod-qty-num" id="qty-p47">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p47',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p47','Chorizo indio','75.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Chorizo argentino" decoding="async" loading="lazy" src="images/menu-productos/50-chorizo-argentino-e856c04bc082.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Chorizo argentino</h3>
+<div class="pp">
+<span class="pn">L 75.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p48',-1)">−</button>
+<span class="prod-qty-num" id="qty-p48">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p48',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p48','Chorizo argentino','75.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Chorizo cervecero" decoding="async" loading="lazy" src="images/menu-productos/51-chorizo-cervecero-700fa0d7af49.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Chorizo cervecero</h3>
+<div class="pp">
+<span class="pn">L 70.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p49',-1)">−</button>
+<span class="prod-qty-num" id="qty-p49">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p49',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p49','Chorizo cervecero','70.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Chorizo suelto mixto" decoding="async" loading="lazy" src="images/menu-productos/52-chorizo-suelto-mixto-65d8487d6dfc.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Chorizo suelto mixto</h3>
+<div class="pp">
+<span class="pn">L 65.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p50',-1)">−</button>
+<span class="prod-qty-num" id="qty-p50">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p50',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p50','Chorizo suelto mixto','65.00')">Agregar</button>
+</div>
+</div>
+</div><div class="pc">
+<div class="pi">
+<img alt="Chorizo suelto cerdo" decoding="async" loading="lazy" src="images/menu-productos/53-chorizo-suelto-cerdo-ebd1ee279607.webp"/>
+<div class="po"></div>
+</div>
+<div class="pf">
+<h3>Chorizo suelto cerdo</h3>
+<div class="pp">
+<span class="pn">L 60.00</span>
+<span class="pu">/ lb</span>
+</div>
+<div class="prod-controls">
+<div class="prod-qty-wrap">
+<button class="prod-qty-btn" onclick="changeQty('p51',-1)">−</button>
+<span class="prod-qty-num" id="qty-p51">1</span>
+<button class="prod-qty-btn" onclick="changeQty('p51',1)">+</button>
+</div>
+<button class="prod-add-btn" id="add-p0" onclick="addToCart('p51','Chorizo suelto cerdo','60.00')">Agregar</button>
+</div>
+</div>
+</div></div>
+<footer>© 2025 Hacienda Las Colinas — Procesado por DIPRO</footer>
+<a class="wa-float" href="https://wa.me/50489973353" target="_blank">
+<svg fill="none" viewbox="0 0 32 32"><path d="M16 4.5C9.65 4.5 4.5 9.65 4.5 16c0 2.18.6 4.23 1.64 5.99L4.5 27.5l5.7-1.62A11.46 11.46 0 0 0 16 27.5c6.35 0 11.5-5.15 11.5-11.5S22.35 4.5 16 4.5Zm5.72 16.4c-.24.67-1.38 1.28-1.88 1.34-.47.06-1.07.08-1.72-.11-.4-.12-.9-.28-1.55-.55-2.72-1.18-4.5-3.9-4.63-4.08-.13-.18-1.07-1.42-1.07-2.71 0-1.29.68-1.92.92-2.18.24-.26.52-.33.7-.33.17 0 .35 0 .5.01.16.01.38-.06.59.45.22.52.74 1.81.8 1.94.07.13.11.28.02.45-.08.17-.13.28-.26.43-.13.15-.27.34-.39.45-.13.12-.26.25-.11.49.15.24.66 1.09 1.42 1.76.98.87 1.8 1.14 2.05 1.27.25.13.39.11.53-.06.15-.17.62-.72.79-.97.17-.25.33-.21.56-.12.22.08 1.41.67 1.65.79.24.12.4.18.46.28.06.1.06.57-.18 1.24Z" fill="#fff"></path></svg>
+    Contacto
+  </a>
+<script>
+    var cart = {};
+
+    function getQty(id) { return parseInt(document.getElementById('qty-'+id).textContent) || 1; }
+
+    function changeQty(id, delta) {
+      var el = document.getElementById('qty-'+id);
+      var v = Math.max(1, (parseInt(el.textContent)||1) + delta);
+      el.textContent = v;
+    }
+
+    function addToCart(id, name, price) {
+      var qty = getQty(id);
+      if (cart[id]) { cart[id].qty += qty; }
+      else { cart[id] = { name: name, price: parseFloat(price), qty: qty }; }
+      var btn = document.getElementById('add-'+id);
+      btn.textContent = 'Agregado ✓';
+      btn.classList.add('added');
+      setTimeout(function(){ btn.textContent = 'Agregar al carrito'; btn.classList.remove('added'); }, 1500);
+      renderCart();
+      updateCartCount();
+    }
+
+    function removeFromCart(id) {
+      delete cart[id];
+      renderCart();
+      updateCartCount();
+    }
+
+    function changeCartQty(id, delta) {
+      if (!cart[id]) return;
+      cart[id].qty = Math.max(1, cart[id].qty + delta);
+      renderCart();
+      updateCartCount();
+    }
+
+    function updateCartCount() {
+      var total = Object.values(cart).reduce(function(s,i){ return s + i.qty; }, 0);
+      var el = document.getElementById('cart-count');
+      if (el) el.textContent = total;
+    }
+
+    function renderCart() {
+      var items = document.getElementById('cart-items');
+      var keys = Object.keys(cart);
+      if (keys.length === 0) {
+        items.innerHTML = '<p class="cart-empty">Tu carrito está vacío</p>';
+        document.getElementById('cart-total-num').textContent = 'L 0.00';
+        return;
+      }
+      var html = '';
+      var total = 0;
+      keys.forEach(function(id) {
+        var item = cart[id];
+        var sub = item.price * item.qty;
+        total += sub;
+        html += '<div class="cart-item">' +
+          '<div class="cart-item-name">' + item.name + '</div>' +
+          '<div class="cart-item-controls">' +
+          '<button class="qty-btn" onclick="changeCartQty(\''+id+'\', -1)">−</button>' +
+          '<span class="qty-num">' + item.qty + '</span>' +
+          '<button class="qty-btn" onclick="changeCartQty(\''+id+'\', 1)">+</button>' +
+          '<button class="qty-btn" style="color:#c44;margin-left:.3rem" onclick="removeFromCart(\''+id+'\')">✕</button>' +
+          '</div>' +
+          '<div class="cart-item-price">L ' + sub.toFixed(2) + '</div>' +
+          '</div>';
+      });
+      items.innerHTML = html;
+      document.getElementById('cart-total-num').textContent = 'L ' + total.toFixed(2);
+    }
+
+    function openCart() {
+      document.getElementById('cart-overlay').classList.add('open');
+      document.getElementById('cart-drawer').classList.add('open');
+    }
+
+    function closeCart() {
+      document.getElementById('cart-overlay').classList.remove('open');
+      document.getElementById('cart-drawer').classList.remove('open');
+    }
+
+    function sendToWhatsApp() {
+      var keys = Object.keys(cart);
+      if (keys.length === 0) { alert('Tu carrito está vacío'); return; }
+      var msg = 'Hola! Me gustaría realizar el siguiente pedido:%0A%0A';
+      var total = 0;
+      keys.forEach(function(id) {
+        var item = cart[id];
+        var sub = item.price * item.qty;
+        total += sub;
+        msg += '• ' + item.name + ' x' + item.qty + ' lb — L ' + sub.toFixed(2) + '%0A';
+      });
+      msg += '%0A*Total: L ' + total.toFixed(2) + '*';
+      window.open('https://wa.me/50489973353?text=' + msg, '_blank');
+    }
+  </script>
+<script>
+  (function(){
+    var topBtn = document.querySelector('.to-top-btn');
+    if (!topBtn) return;
+    function toggleTopBtn(){
+      if (window.scrollY > 420) topBtn.classList.add('show');
+      else topBtn.classList.remove('show');
+    }
+    window.addEventListener('scroll', toggleTopBtn, { passive: true });
+    toggleTopBtn();
+  })();
+</script>
+</body>
+</html>
